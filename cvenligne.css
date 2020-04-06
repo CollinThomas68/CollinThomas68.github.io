@@ -164,7 +164,7 @@ ul
 	}
 	#Apropos
 	{
-		height:400px;
+		height:600px;
 	}
 
 	h1,h1+p
@@ -199,7 +199,10 @@ ul
   	{
     width: 970px;
  	 }
-
+	#Apropos
+	{
+		height:550px;
+	}
 	figure
 	{
 	flex-direction: row;
