@@ -84,8 +84,8 @@ figure
 	justify-content: space-around;
 	width:100%;
 	margin:auto;
+	padding-top:25px;
 }
-
 
 h1,h1+p
 {
@@ -166,7 +166,10 @@ ul
 	{
 		height:600px;
 	}
-
+	#Loisirs
+	{
+		height:300px;
+	}
 	h1,h1+p
 	{
 	width: auto;
@@ -190,6 +193,7 @@ ul
 	flex-direction: column;
 	margin:auto;
 	align-items: center;
+	padding-top:25px;
 	}
 }
 
@@ -203,12 +207,18 @@ ul
 	{
 		height:550px;
 	}
+	#Loisirs
+	{
+		height: 150px;}
 	figure
 	{
+	
 	flex-direction: row;
 	justify-content: space-around;
 	width:90%;
 	margin:auto;
+	padding-top:25px;
+
 	}
 }
 
@@ -257,7 +267,7 @@ ul
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
 {
-     /* IE10+ CSS styles go here */
+     /* IE10+ CSS  */
      	ul 
 	{
 	list-style-image: none;
