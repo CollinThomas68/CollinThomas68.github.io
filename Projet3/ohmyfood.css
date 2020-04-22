@@ -59,6 +59,7 @@ header {
           box-shadow: 1px 1px 12px #555;
   text-align: center;
   font-size: 2em;
+  overflow: hidden;
 }
 
 strong {
@@ -76,8 +77,8 @@ strong {
 }
 
 .box a:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   opacity: 0.5;
 }
 
@@ -85,8 +86,8 @@ strong {
   background-color: #fcdfdb;
 }
 
-.box--1 a {
-  color: #3c1218;
+.box--1 img {
+  width: 100%;
 }
 
 i {
