@@ -1,14 +1,11 @@
 body {
   color: #ffffff;
-}
-
-#bloc-page {
-  width: 1500px;
-  margin: auto;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 header {
-  height: 243px;
+  height: 200px;
   background-color: #579c87;
   border-bottom: 2px solid #a1c181;
   color: #fdcb46;
@@ -42,8 +39,8 @@ header {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .box {
@@ -57,8 +54,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 90px;
-  height: 760px;
-  width: 40%;
+  height: 600px;
+  width: 20%;
   -webkit-box-shadow: 1px 1px 12px #555;
           box-shadow: 1px 1px 12px #555;
   text-align: center;
@@ -84,6 +81,10 @@ strong {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 0.5;
+}
+
+.box img {
+  width: 100%;
 }
 
 .box--1 {
@@ -147,7 +148,7 @@ i {
 }
 
 .bientot {
-  height: 428px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,12 +185,11 @@ footer {
   border-top: 2px solid #a1c181;
   color: #fdcb46;
   font-size: 2em;
-  height: 136px;
+  height: 75px;
   float: bottom;
   position: fixed;
   bottom: 0px;
   width: 100%;
-  max-width: 1500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,9 +211,6 @@ footer div {
 }
 
 @media all and (max-width: 1550px) {
-  #bloc-page {
-    width: 1170px;
-  }
   .grand {
     display: none;
   }
@@ -225,19 +222,14 @@ footer div {
   }
   .box {
     margin-top: 90px;
-    height: 593px;
+    height: 650px;
+    width: 500px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
-  }
-  footer {
-    max-width: 1170px;
   }
 }
 
 @media all and (max-width: 1210px) {
-  #bloc-page {
-    width: 970px;
-  }
   .moyen {
     display: none;
   }
@@ -250,6 +242,7 @@ footer div {
   .box {
     margin-top: 90px;
     height: 486px;
+    width: 400px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
   }
@@ -257,15 +250,11 @@ footer div {
     font-size: 1.2em;
   }
   footer {
-    max-width: 970px;
     font-size: 1.5em;
   }
 }
 
 @media all and (max-width: 1000px) {
-  #bloc-page {
-    width: 750px;
-  }
   .petit {
     display: none;
   }
@@ -282,15 +271,11 @@ footer div {
             box-shadow: 1px 1px 12px #555;
   }
   footer {
-    max-width: 750px;
     font-size: 1.2em;
   }
 }
 
 @media all and (max-width: 790px) {
-  #bloc-page {
-    width: 470px;
-  }
   .minus {
     display: none;
   }
@@ -314,7 +299,6 @@ footer div {
             box-shadow: 1px 1px 12px #555;
   }
   footer {
-    max-width: 470px;
     font-size: 1em;
   }
 }

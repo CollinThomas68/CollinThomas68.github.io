@@ -1,21 +1,15 @@
 
 body
 {
-		color:#ffffff;
-
+	color:#ffffff;
+	margin-left:0px;
+	margin-right:0px;
 }
 
-#bloc-page
-{
-	width :1500px;
-	margin : auto;
-
-
-}
 
 header
 {
-	height: 243px;
+	height: 200px;
 	background-color: #579c87;
 	border-bottom: 2px solid #a1c181;
 	color:#fdcb46;
@@ -41,8 +35,8 @@ header
 	display:flex;
 	justify-content:space-between;
 	flex-wrap: wrap;
-	padding-left:10%;
-	padding-right:10%;
+	padding-left:5%;
+	padding-right:5%;
 
 
 }
@@ -52,8 +46,8 @@ header
 	justify-content:center;
 	align-items:center;
 	margin-top:90px;
-	height:760px;
-	width:40%;
+	height:600px;
+	width:20%;
 	box-shadow:1px 1px 12px #555;
 	text-align:center;
     font-size:2em;
@@ -75,6 +69,10 @@ strong
     }
 }
 
+.box img
+{
+	width:100%;
+}
 .box--1
 {
     background-color:#fcdfdb;
@@ -147,7 +145,7 @@ i
 
 .bientot
 {
-	height:428px;
+	height:300px;
 	display:flex;
 	justify-content: center;
 	align-items:top;
@@ -175,16 +173,12 @@ footer
 	background-color: #579c87;
 	border-top: 2px solid #a1c181;
 	color:#fdcb46;
-
-	
 	font-size:2em;
-
-    height:136px;
+    height:75px;
 	float:bottom;
 	position:fixed;
 	bottom:0px;
 	width:100%;
-	max-width:1500px;
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
@@ -209,11 +203,7 @@ footer div
 
 @media all and (max-width:1550px)
 {
-	#bloc-page
-	{
-		width:1170px;
-	
-	}
+
 	.grand
 	{
 		display:none;
@@ -229,25 +219,17 @@ footer div
 	.box
 	{
 		margin-top:90px;
-		height:593px;
+		height:650px;
+		width:500px;
 		box-shadow:1px 1px 12px #555;
 	
 	}
 
-
-	footer 
-	{
-		max-width:1170px;
-	}
 }
 
 @media all and (max-width:1210px)
 {
-	#bloc-page
-	{
-		width:970px;
-	
-	}
+
 
 	.moyen
 	{
@@ -267,6 +249,7 @@ footer div
 	{
 		margin-top:90px;
 		height:486px;
+		width:400px;
 		box-shadow:1px 1px 12px #555;
 	
 	}
@@ -276,18 +259,14 @@ footer div
 	}
 	footer 
 	{
-		max-width:970px;
+
 		font-size:1.5em;
 	}
 }
 
 @media all and (max-width:1000px)
 {
-	#bloc-page
-	{
-		width:750px;
-	
-	}	
+
 	.petit
 	{
 		display:none;
@@ -309,18 +288,13 @@ footer div
 	}
 	footer 
 	{
-		max-width:750px;
 		font-size:1.2em;
 	}
 }
 
 @media  all and (max-width:790px)
 {
-	#bloc-page
-	{
-		width:470px;
-	
-	}	
+
 	.minus
 	{
 		display:none;
@@ -344,7 +318,7 @@ footer div
 	}
 	footer 
 	{
-		max-width:470px;
+
 		font-size:1em;
 	}
 }
