@@ -309,5 +309,8 @@ h1 {
   footer {
     font-size: 1em;
   }
+  .bloc-page p {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=ohmyfood.css.map */
