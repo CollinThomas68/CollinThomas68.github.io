@@ -55,7 +55,7 @@ header {
           align-items: center;
   margin-top: 90px;
   height: 600px;
-  width: 20%;
+  width: 300px;
   -webkit-box-shadow: 1px 1px 12px #555;
           box-shadow: 1px 1px 12px #555;
   text-align: center;
@@ -267,6 +267,7 @@ footer div {
   .box {
     margin-top: 90px;
     height: 374px;
+    width: 300px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
   }
@@ -284,17 +285,21 @@ footer div {
   }
   .container {
     background-color: blue;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-top: 45px;
-    height: 374px;
-    width: 100%;
+    height: 500px;
+    width: 450px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
   }
