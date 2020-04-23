@@ -283,6 +283,9 @@ h1 {
   .tel {
     display: inherit;
   }
+  .logo {
+    width: 75%;
+  }
   .container {
     background-color: blue;
     -webkit-box-orient: vertical;
