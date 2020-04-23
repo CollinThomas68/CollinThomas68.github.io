@@ -266,7 +266,7 @@ h1 {
   }
   .box {
     margin-top: 90px;
-    height: 374px;
+    height: 400px;
     width: 350px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
@@ -301,8 +301,8 @@ h1 {
   }
   .box {
     margin-top: 45px;
-    height: 500px;
-    width: 400px;
+    height: 400px;
+    width: 300px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
   }
