@@ -1,5 +1,4 @@
 body {
-  color: #ffffff;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -173,6 +172,42 @@ footer div {
 
 .droite {
   text-align: right;
+}
+
+.bloc-page {
+  width: 80%;
+  background-color: #fcdfdb;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.produit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media all and (max-width: 1550px) {

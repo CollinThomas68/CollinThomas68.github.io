@@ -1,7 +1,6 @@
 
 body
 {
-	color:#ffffff;
 	margin-left:0px;
 	margin-right:0px;
 }
@@ -167,6 +166,45 @@ footer div
 	text-align:right;
 
 }
+
+
+
+.bloc-page
+{
+	width: 80%;
+	background-color:#fcdfdb;
+	margin:auto;
+	padding-left:50px;
+	padding-right:50px;
+
+
+}
+
+h1
+{
+	text-align:center;
+}
+
+.titre
+{
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+
+.produit
+{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+
+
+
+
+
 
 
 @media all and (max-width:1550px)
