@@ -180,9 +180,10 @@ footer div {
   margin: auto;
   padding-left: 50px;
   padding-right: 50px;
+  margin-bottom: 150px;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
@@ -190,12 +191,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.trait {
+  width: 20%;
 }
 
 .produit {
@@ -226,6 +231,9 @@ h1 {
     width: 550px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
+  }
+  .trait {
+    width: 25%;
   }
 }
 
@@ -273,6 +281,9 @@ h1 {
   }
   footer {
     font-size: 1.2em;
+  }
+  .trait {
+    width: 30%;
   }
 }
 

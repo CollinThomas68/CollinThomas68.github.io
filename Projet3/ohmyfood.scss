@@ -176,23 +176,28 @@ footer div
 	margin:auto;
 	padding-left:50px;
 	padding-right:50px;
+	margin-bottom:150px;
 
 
 }
 
-h1
+h1,h2
 {
 	text-align:center;
 }
 
+
 .titre
 {
 	display:flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items:center;
 }
 
-
+.trait
+{
+	width:20%;
+}
 .produit
 {
 	display:flex;
@@ -230,6 +235,11 @@ h1
 		box-shadow:1px 1px 12px #555;
 	
 	}
+
+	.trait
+{
+	width:25%;
+}
 
 }
 
@@ -297,6 +307,11 @@ h1
 	{
 		font-size:1.2em;
 	}
+
+	.trait
+{
+	width:30%;
+}
 }
 
 @media  all and (max-width:790px)
