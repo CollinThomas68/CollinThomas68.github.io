@@ -34,13 +34,11 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .box {
@@ -190,7 +188,7 @@ footer div {
   .box {
     margin-top: 90px;
     height: 650px;
-    width: 500px;
+    width: 550px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
   }
@@ -234,7 +232,7 @@ footer div {
   .box {
     margin-top: 90px;
     height: 374px;
-    width: 300px;
+    width: 350px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
   }
