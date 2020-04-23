@@ -176,9 +176,19 @@ footer div
 	margin:auto;
 	padding-left:50px;
 	padding-right:50px;
-	margin-bottom:150px;
+	margin-top:50px;
+	margin-bottom:500px;
 
 
+}
+
+
+.logomenu
+{
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	padding-top:75px;
 }
 
 h1,h2
@@ -186,6 +196,12 @@ h1,h2
 	text-align:center;
 }
 
+i 
+{
+	background: linear-gradient(90deg, #f04a5e, #f78f6a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
 .titre
 {
@@ -196,7 +212,7 @@ h1,h2
 
 .trait
 {
-	width:20%;
+	width:15%;
 }
 .produit 
 {
@@ -209,9 +225,20 @@ h1,h2
 
 }
 
+.logomenubas
+{
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items:center;
+	padding-top:75px;
+	padding-bottom:50px;
+}
 
-
-
+.fa-3x
+{
+	padding-right:10px;
+}
 
 
 
