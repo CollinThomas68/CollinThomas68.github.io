@@ -210,9 +210,12 @@ h1, h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 15px;
 }
 
 @media all and (max-width: 1550px) {
@@ -234,6 +237,10 @@ h1, h2 {
   }
   .trait {
     width: 25%;
+  }
+  .produit {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 
@@ -259,6 +266,10 @@ h1, h2 {
   }
   footer {
     font-size: 1.5em;
+  }
+  .produit {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -323,8 +334,12 @@ h1, h2 {
   .bloc-page {
     width: 70%;
   }
-  .bloc-page p {
-    width: 300px;
+  .produit {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .prix {
+    padding-left: 25px;
   }
 }
 /*# sourceMappingURL=ohmyfood.css.map */
