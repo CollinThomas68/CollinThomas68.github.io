@@ -166,9 +166,36 @@ footer {
           align-items: center;
 }
 
-footer div {
+.wiggle {
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.wiggle:hover {
+  -webkit-animation: shake 450ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+          animation: shake 450ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+}
+
+@-webkit-keyframes shake {
+  25% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+
+@keyframes shake {
+  25% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
 }
 
 a {
@@ -176,10 +203,13 @@ a {
   color: #fdcb46;
 }
 
-.droite {
-  text-align: right;
-}
+/*
+.droite
+{
+	text-align:right;
 
+}
+*/
 /* Code Css pour les menus en général*/
 .logomenu {
   display: -webkit-box;
