@@ -172,8 +172,8 @@ footer {
 }
 
 .wiggle:hover {
-  -webkit-animation: shake 450ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-          animation: shake 450ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  -webkit-animation: shake 450ms ease-in-out;
+          animation: shake 450ms ease-in-out;
 }
 
 @-webkit-keyframes shake {
@@ -204,7 +204,7 @@ a {
 }
 
 /*
-.droite
+.droitecubic-bezier(.4,.1,.6,.9)
 {
 	text-align:right;
 

@@ -158,7 +158,7 @@ footer
 	padding-left:25px;
 	padding-right:25px;
 	&:hover{
-        animation: shake 450ms cubic-bezier(.4,.1,.6,.9);
+        animation: shake 450ms ease-in-out ;
 
     }
 }
@@ -182,7 +182,7 @@ text-decoration:none;
 color:#fdcb46;
 }
 /*
-.droite
+.droitecubic-bezier(.4,.1,.6,.9)
 {
 	text-align:right;
 
