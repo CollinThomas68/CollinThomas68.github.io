@@ -89,10 +89,6 @@ strong {
   background-color: #fcdfdb;
 }
 
-.box--1 img {
-  width: 100%;
-}
-
 i {
   background: -webkit-gradient(linear, left top, right top, from(#f04a5e), to(#f78f6a));
   background: linear-gradient(90deg, #f04a5e, #f78f6a);
@@ -218,8 +214,50 @@ a {
   padding-top: 75px;
 }
 
+.bloc-page {
+  width: 80%;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 125px;
+  margin-bottom: 200px;
+}
+
 h1, h2 {
   text-align: center;
+}
+
+.categ {
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.categ::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+}
+
+.categ:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 .titre {
@@ -277,13 +315,7 @@ h2 {
 
 /* Code Css pour le menu La note enchantée*/
 .bloc-page1 {
-  width: 80%;
   background-color: #fcdfdb;
-  margin: auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-top: 125px;
-  margin-bottom: 200px;
 }
 
 i {
@@ -329,13 +361,7 @@ i {
 
 /* Code Css pour le menu Le délice des papilles*/
 .bloc-page3 {
-  width: 80%;
   background-color: #edefef;
-  margin: auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-top: 125px;
-  margin-bottom: 200px;
 }
 
 .delice {
@@ -347,13 +373,7 @@ i {
 
 /* Code Css pour le menu La palette du goût*/
 .bloc-page4 {
-  width: 80%;
   background-color: #fdfffd;
-  margin: auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-top: 125px;
-  margin-bottom: 200px;
 }
 
 @media all and (max-width: 1550px) {
@@ -477,16 +497,7 @@ i {
   footer {
     font-size: 1em;
   }
-  .bloc-page1 {
-    width: 70%;
-  }
-  .bloc-page2 {
-    width: 70%;
-  }
-  .bloc-page3 {
-    width: 70%;
-  }
-  .bloc-page4 {
+  .bloc-page {
     width: 70%;
   }
   .trait {

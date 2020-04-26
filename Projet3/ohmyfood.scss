@@ -75,12 +75,7 @@ strong
     background-color:#fcdfdb;
 
 }
-.box--1 img
-{
-    width:100%;
 
-
-}
 i 
 {
 	background: linear-gradient(90deg, #f04a5e, #f78f6a);
@@ -190,11 +185,44 @@ color:#fdcb46;
 	align-items: center;
 	padding-top:75px;
 }
+.bloc-page
+{
+	width: 80%;
+
+	margin:auto;
+	padding-left:50px;
+	padding-right:50px;
+	margin-top:125px;
+	margin-bottom:200px;
+}
 
 h1,h2
 {
 	text-align:center;
 
+}
+.categ{
+	font-size:2em;
+	text-align:center;
+	position:relative;
+	margin-left:25px;
+	margin-right:25px;
+}
+.categ::before{
+	content:"";
+	background-color:black;
+	position:absolute;
+	width:100%;
+	bottom:0;
+	left: 0;
+	height:2px;
+	transform:scaleX(0);
+	transform-origin: bottom left;
+	transition:transform 1000ms ease-in-out;
+}
+.categ:hover::before{
+	transform:scaleX(1);
+	transform-origin:bottom left;
 }
 
 
@@ -239,13 +267,7 @@ h2
 /* Code Css pour le menu La note enchantée*/
 .bloc-page1
 {
-	width: 80%;
 	background-color:#fcdfdb;
-	margin:auto;
-	padding-left:50px;
-	padding-right:50px;
-	margin-top:125px;
-	margin-bottom:200px;
 }
 
 i 
@@ -299,13 +321,7 @@ i
 /* Code Css pour le menu Le délice des papilles*/
 .bloc-page3
 {
-	width: 80%;
 	background-color:#edefef;
-	margin:auto;
-	padding-left:50px;
-	padding-right:50px;
-	margin-top:125px;
-	margin-bottom:200px;
 }
 
 .delice
@@ -317,15 +333,7 @@ i
 /* Code Css pour le menu La palette du goût*/
 .bloc-page4
 {
-	width: 80%;
 	background-color:#fdfffd;
-	margin:auto;
-	padding-left:50px;
-	padding-right:50px;
-	margin-top:125px;
-	margin-bottom:200px;
-
-
 }
 
 
@@ -494,26 +502,12 @@ i
 		font-size:1em;
 	}
 
-	.bloc-page1
+	.bloc-page
 	{
 		width:70%;
 
 	}
-	.bloc-page2
-	{
-		width:70%;
-
-	}
-	.bloc-page3
-	{
-		width:70%;
-
-	}
-	.bloc-page4
-	{
-		width:70%;
-
-	}
+	
 	.trait
 	{
 		width:20%;
