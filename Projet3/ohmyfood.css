@@ -155,7 +155,7 @@ i {
 .box5 {
   background-color: #579c87;
   height: 118px;
-  width: 50%;
+  width: 45%;
   border-radius: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -547,6 +547,9 @@ i {
     width: 300px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
+  }
+  .box5 {
+    width: 300px;
   }
   footer {
     font-size: 1em;
