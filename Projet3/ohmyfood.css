@@ -518,7 +518,7 @@ i {
   footer {
     font-size: 1.2em;
   }
-  .titre {
+  .typeplat {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
