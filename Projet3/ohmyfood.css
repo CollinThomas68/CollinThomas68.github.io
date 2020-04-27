@@ -1,4 +1,17 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("Fonts/Montserrat-Light.otf") format("truetype");
+  font-family: 'devonshire-regular';
+  src: url("Fonts/devonshire-regular.ttf") format("truetype");
+  font-family: 'CroissantOne-Regular';
+  src: url("Fonts/CroissantOne-Regular.ttf") format("truetype");
+  font-family: 'gosmicksans';
+  src: url("Fonts/gosmicksans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin-left: 0px;
   margin-right: 0px;
@@ -143,6 +156,7 @@ mark {
   text-align: center;
   background-color: #579c87;
   color: #fdcb46;
+  font-family: Montserrat-Light, sans-serif;
 }
 
 .waiting {
@@ -188,6 +202,7 @@ mark {
 footer {
   background-color: #579c87;
   border-top: 2px solid #a1c181;
+  font-family: Montserrat-Light, sans-serif;
   color: #fdcb46;
   font-size: 2em;
   height: 75px;
@@ -360,6 +375,8 @@ h2 {
 /* Code Css pour le menu La note enchantée*/
 .bloc-page1 {
   background-color: #fcdfdb;
+  font-family: devonshire-regular, sans-serif;
+  font-size: 1.5em;
 }
 
 i {
@@ -377,6 +394,7 @@ i {
 .bloc-page2 {
   width: 80%;
   background-color: #fff5fe;
+  font-family: CroissantOne-regular, sans-serif;
   margin: auto;
   padding-left: 50px;
   padding-right: 50px;
@@ -406,6 +424,7 @@ i {
 /* Code Css pour le menu Le délice des papilles*/
 .bloc-page3 {
   background-color: #edefef;
+  font-family: gosmicksans,sans-serif;
 }
 
 .delice {
@@ -418,6 +437,7 @@ i {
 /* Code Css pour le menu La palette du goût*/
 .bloc-page4 {
   background-color: #fdfffd;
+  font-family: gosmicksans,sans-serif;
 }
 
 @media all and (max-width: 1550px) {
