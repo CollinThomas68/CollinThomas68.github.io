@@ -1,16 +1,40 @@
 @font-face { 
     font-family: 'Montserrat-Light';
 	src: url('Fonts/Montserrat-Light.otf') format('truetype');
-	font-family: 'devonshire-regular';
-	src: url('Fonts/devonshire-regular.ttf') format('truetype');
-	font-family: 'CroissantOne-Regular';
-	src: url('Fonts/CroissantOne-Regular.ttf') format('truetype');
-	font-family: 'gosmicksans';
-	src: url('Fonts/gosmicksans.ttf') format('truetype');
+
+
+
 	font-weight:normal;
 	font-style:normal;
 }
 
+@font-face { 
+font-family: 'devonshire-regular';
+src: url('Fonts/devonshire-regular.ttf') format('truetype');
+font-weight:normal;
+font-style:normal;
+}
+
+@font-face { 
+font-family: 'CroissantOne-Regular';
+src: url('Fonts/CroissantOne-Regular.ttf') format('truetype');
+font-weight:normal;
+font-style:normal;
+}
+
+@font-face { 
+font-family: 'gosmicksans';
+src: url('Fonts/gosmicksans.ttf') format('truetype');
+font-weight:normal;
+font-style:normal;
+}
+
+@font-face { 
+font-family: 'Kaushan';
+src: url('Fonts/KaushanScript-Regular.otf') format('truetype');
+font-weight:normal;
+font-style:normal;	
+}
 
 body
 {
@@ -231,7 +255,7 @@ color:#fdcb46;
 .bloc-page
 {
 	width: 80%;
-
+	font-family:gosmicksans,sans-serif;
 	margin:auto;
 	padding-left:50px;
 	padding-right:50px;
@@ -244,8 +268,14 @@ h1,h2
 	text-align:center;
 
 }
+
+h2
+{
+	width:20%;
+}
+
 .categ{
-	font-size:2em;
+
 	text-align:center;
 	position:relative;
 	margin-left:25px;
@@ -269,7 +299,7 @@ h1,h2
 }
 
 
-.titre
+.typeplat
 {
 	display:flex;
 	justify-content:center;
@@ -281,10 +311,6 @@ h1,h2
 	width:20%;
 }
 
-h2
-{
-	width:20%;
-}
 
 .produit 
 {
@@ -311,8 +337,11 @@ h2
 .bloc-page1
 {
 	background-color:#fcdfdb;
+}
+
+.bloc-page1 h1, .bloc-page1 h2, .bloc-page1 h3
+{
 	font-family:devonshire-regular, sans-serif;
-	font-size:1.5em;
 }
 
 i 
@@ -332,16 +361,18 @@ i
 {
 	width: 80%;
 	background-color:#fff5fe;
-	font-family:CroissantOne-regular, sans-serif;
+
 	margin:auto;
 	padding-left:50px;
 	padding-right:50px;
 	margin-top:125px;
 	margin-bottom:200px;
-
-
 }
 
+.bloc-page2 h1, .bloc-page2 h2, .bloc-page2 h3
+{
+	font-family:CroissantOne-regular, sans-serif;
+}
 .chic
 {
 	background: linear-gradient(90deg, #d17f45, #8f5bfe);
@@ -368,7 +399,12 @@ i
 .bloc-page3
 {
 	background-color:#edefef;
-	font-family:gosmicksans,sans-serif;
+
+}
+
+.bloc-page3 h1, .bloc-page3 h2, .bloc-page3 h3
+{
+	font-family:Kaushan,sans-serif;
 }
 
 .delice
@@ -381,10 +417,13 @@ i
 .bloc-page4
 {
 	background-color:#fdfffd;
-	font-family:gosmicksans,sans-serif;
+
 }
 
-
+.bloc-page4 h1, .bloc-page4 h2, .bloc-page4 h3
+{
+	font-family:Kaushan,sans-serif;
+}
 
 
 
