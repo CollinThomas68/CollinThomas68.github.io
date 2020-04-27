@@ -261,6 +261,7 @@ h1,h2,h3
 
 h2
 {
+
 	width:20%;
 }
 
@@ -328,7 +329,7 @@ h2
 	background-color:#fcdfdb;
 }
 
-.bloc-page1 h1, .bloc-page1 h2, .bloc-page1 h3
+.bloc-page1 h1, .bloc-page1 h3
 {
 	font-family:devonshire-regular, sans-serif;
 }
@@ -358,7 +359,7 @@ i
 	margin-bottom:200px;
 }
 
-.bloc-page2 h1, .bloc-page2 h2, .bloc-page2 h3
+.bloc-page2 h1, .bloc-page2 h3
 {
 	font-family:CroissantOne-regular, sans-serif;
 }
@@ -392,7 +393,7 @@ i
 
 }
 
-.bloc-page3 h1, .bloc-page3 h2, .bloc-page3 h3
+.bloc-page3 h1, .bloc-page3 h3
 {
 	font-family:Kaushan,sans-serif;
 }
@@ -411,7 +412,7 @@ i
 
 }
 
-.bloc-page4 h1, .bloc-page4 h2, .bloc-page4 h3
+.bloc-page4 h1, .bloc-page4 h3
 {
 	font-family:Kaushan,sans-serif;
 }
@@ -540,6 +541,7 @@ i
 	h2
 	{
 		width:50%;
+		font-size:0.8em; 
 	}
 
 	.produit
