@@ -55,15 +55,7 @@ header
 	align-items:center;	
 	top:0px;
 	width:100%;
-
-
 }
-
-.moyen,.petit,.minus,.tel
-{
-	display:none;
-}
-
 
 .container
 {
@@ -74,6 +66,7 @@ header
 
 
 }
+
 .box
 {
 	display:flex;
@@ -88,10 +81,12 @@ header
     overflow:hidden;
 
 }
+
 strong
 {
 	font-size:1.5em;
 }
+
 .box a
 {
     text-decoration:none;
@@ -107,6 +102,7 @@ strong
 {
 	width:100%;
 }
+
 .box--1
 {
     background-color:#fcdfdb;
@@ -119,28 +115,21 @@ i
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
 .box--2
 {
 	background-color:#fff5fe;
 }
-
-
-
 
 .box--3
 {
 	background-color:#f9f9f9;
 }
 
-
-
-
 .box--4
 {
 	background-color:#fdfffd;
 }
-
-
 
 .bientot
 {
@@ -151,6 +140,7 @@ i
 
 
 }
+
 .box5
 {
 	background-color: #579c87;
@@ -164,6 +154,7 @@ i
 	margin-top:90px;
 	font-size:2em;
 }
+
 mark
 {
 	text-align:center;
@@ -195,6 +186,7 @@ mark
 	  text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 #fdcb46;
 	}
 }
+
 footer
 {
 
@@ -211,10 +203,8 @@ footer
 	display:flex; 
 	justify-content:space-between;
 	align-items:center;
-
-
-
 }
+
 .wiggle
 {
 	padding-left:25px;
@@ -263,7 +253,7 @@ color:#fdcb46;
 	margin-bottom:200px;
 }
 
-h1,h2
+h1,h2,h3
 {
 	text-align:center;
 
@@ -278,9 +268,8 @@ h2
 
 	text-align:center;
 	position:relative;
-	margin-left:25px;
-	margin-right:25px;
 }
+
 .categ::before{
 	content:"";
 	background-color:black;
@@ -373,6 +362,7 @@ i
 {
 	font-family:CroissantOne-regular, sans-serif;
 }
+
 .chic
 {
 	background: linear-gradient(90deg, #d17f45, #8f5bfe);
@@ -413,6 +403,7 @@ i
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;	
 }
+
 /* Code Css pour le menu La palette du goût*/
 .bloc-page4
 {
@@ -429,19 +420,6 @@ i
 
 @media all and (max-width:1550px)
 {
-
-	.grand
-	{
-		display:none;
-	}
-	.moyen
-	{
-		display:inherit;
-	}
-	.container
-	{
-		background-color:red;
-	}
 	.box
 	{
 		margin-top:90px;
@@ -466,22 +444,6 @@ i
 
 @media all and (max-width:1210px)
 {
-
-
-	.moyen
-	{
-		display:none;
-	}
-	.petit
-	{
-		display:inherit;
-	}
-	.container
-	{
-		background-color:green;
-
-	}
-
 	.box
 	{
 		margin-top:90px;
@@ -514,19 +476,6 @@ i
 
 @media all and (max-width:1000px)
 {
-
-	.petit
-	{
-		display:none;
-	}
-	.minus
-	{
-		display:inherit;
-	}
-	.container
-	{
-		background-color:yellow;
-	}
 	.box
 	{
 		margin-top:90px;
@@ -534,11 +483,6 @@ i
 		width:350px;
 		box-shadow:1px 1px 12px #555;
 	
-	}
-
-	h2
-	{
-		width:20%;
 	}
 
 	footer 
@@ -555,26 +499,18 @@ i
 
 @media  all and (max-width:790px)
 {
-
-	.minus
-	{
-		display:none;
-	}
-	.tel
-	{
-		display:inherit;
-	}
 	.logo
 	{
 		width:300px;
 	}
+
 	.container
 	{
-		background-color:blue;
 		flex-direction:column;
 		justify-content:space-between;
 		align-items:center;
 	}
+
 	.box
 	{
 
@@ -583,6 +519,7 @@ i
 		width:300px;
 		box-shadow:1px 1px 12px #555;	
 	}
+
 	footer 
 	{
 
@@ -599,6 +536,7 @@ i
 	{
 		width:20%;
 	}
+
 	h2
 	{
 		width:50%;

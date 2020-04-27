@@ -61,10 +61,6 @@ header {
   width: 100%;
 }
 
-.moyen, .petit, .minus, .tel {
-  display: none;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,7 +301,7 @@ a {
   margin-bottom: 200px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   text-align: center;
 }
 
@@ -316,8 +312,6 @@ h2 {
 .categ {
   text-align: center;
   position: relative;
-  margin-left: 25px;
-  margin-right: 25px;
 }
 
 .categ::before {
@@ -474,15 +468,6 @@ i {
 }
 
 @media all and (max-width: 1550px) {
-  .grand {
-    display: none;
-  }
-  .moyen {
-    display: inherit;
-  }
-  .container {
-    background-color: red;
-  }
   .box {
     margin-top: 90px;
     height: 650px;
@@ -500,15 +485,6 @@ i {
 }
 
 @media all and (max-width: 1210px) {
-  .moyen {
-    display: none;
-  }
-  .petit {
-    display: inherit;
-  }
-  .container {
-    background-color: green;
-  }
   .box {
     margin-top: 90px;
     height: 486px;
@@ -532,24 +508,12 @@ i {
 }
 
 @media all and (max-width: 1000px) {
-  .petit {
-    display: none;
-  }
-  .minus {
-    display: inherit;
-  }
-  .container {
-    background-color: yellow;
-  }
   .box {
     margin-top: 90px;
     height: 400px;
     width: 350px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
-  }
-  h2 {
-    width: 20%;
   }
   footer {
     font-size: 1.2em;
@@ -562,17 +526,10 @@ i {
 }
 
 @media all and (max-width: 790px) {
-  .minus {
-    display: none;
-  }
-  .tel {
-    display: inherit;
-  }
   .logo {
     width: 300px;
   }
   .container {
-    background-color: blue;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
