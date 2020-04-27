@@ -123,7 +123,6 @@ i {
 
 .box5 {
   background-color: #579c87;
-  color: #fdcb46;
   height: 118px;
   width: 43.6%;
   border-radius: 45px;
@@ -136,9 +135,54 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fdcb46;
   margin-top: 90px;
   font-size: 2em;
+}
+
+mark {
+  text-align: center;
+  background-color: #579c87;
+  color: #fdcb46;
+}
+
+.waiting {
+  content: ".";
+  -webkit-animation: waiting 1s steps(5, end) infinite;
+          animation: waiting 1s steps(5, end) infinite;
+}
+
+@-webkit-keyframes waiting {
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: #fdcb46;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 #fdcb46;
+  }
+}
+
+@keyframes waiting {
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: #fdcb46;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 #fdcb46;
+  }
 }
 
 footer {
@@ -168,29 +212,29 @@ footer {
 }
 
 .wiggle:hover {
-  -webkit-animation: shake 450ms ease-in-out;
-          animation: shake 450ms ease-in-out;
+  -webkit-animation: shake 450ms infinite;
+          animation: shake 450ms infinite;
 }
 
 @-webkit-keyframes shake {
   25% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   75% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
 }
 
 @keyframes shake {
   25% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
   }
   75% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
 }
 
