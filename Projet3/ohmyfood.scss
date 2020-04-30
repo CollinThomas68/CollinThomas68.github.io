@@ -150,19 +150,12 @@ i
 	background-color: #579c87;
 	color:#fdcb46;
 	height:118px;
-	width:30%;
+	width:20%;
 	border-radius:45px;
 	display:flex;
 	flex-direction:row;
 	justify-content: center;
 	align-items: center;
-	font-family:Montserrat-Light, sans-serif;
-}
-
-mark
-{
-	text-align:center;
-
 	font-family:Montserrat-Light, sans-serif;
 }
 
@@ -237,7 +230,7 @@ color:#fdcb46;
 }
 
 /* Code Css pour les menus en général*/
-.logomenu
+.menuhaut
 {
 	display:flex;
 	flex-direction:column;
@@ -267,13 +260,13 @@ h2
 	width:20%;
 }
 
-.categ{
+.soulignement{
 
 	text-align:center;
 	position:relative;
 }
 
-.categ::before{
+.soulignement::before{
 	content:"";
 	background-color:grey;
 	position:absolute;
@@ -285,7 +278,7 @@ h2
 	transform-origin: bottom left;
 	transition:transform 1000ms ease-in-out;
 }
-.categ:hover::before{
+.soulignement:hover::before{
 	transform:scaleX(1);
 	transform-origin:bottom left;
 }
@@ -315,7 +308,7 @@ h2
 
 }
 
-.logomenubas
+.menubas
 {
 	display:flex;
 	flex-direction:row;
@@ -425,10 +418,7 @@ i
 {
 	.box
 	{
-		height:375px;
 		width:275px;
-		box-shadow:1px 1px 12px #555;
-	
 	}
 
 	.trait
@@ -450,7 +440,6 @@ i
 	{
 		width:80%;
 		margin:auto;
-		background:red;
 	}
 
 	.box
@@ -458,14 +447,13 @@ i
 		margin-top:90px;
 		margin-left:25px;
 		margin-bottom:0px;
-		height:375px;
 		width:300px;
-		box-shadow:1px 1px 12px #555;
 	
 	}
 	.box5
 	{
 		margin-top:90px;
+		width:300px;
 	}
 	.trait
 	{
@@ -481,17 +469,11 @@ i
 
 @media all and (max-width:1000px)
 {
-	.container
-	{
-		background:green;
-	}
 	.box
 	{
 
 		margin-left:0px;
 	}
-
-
 
 	.typeplat
 	{
@@ -502,8 +484,6 @@ i
 
 @media  all and (max-width:790px)
 {
-
-
 	.container
 	{
 		flex-direction:column;
@@ -513,20 +493,7 @@ i
 
 	.box
 	{
-
-		height:375px;
 		width:300px;
-	}
-
-	.box5
-	{
-		width:300px;
-	}
-
-	footer 
-	{
-
-		font-size:1em;
 	}
 
 	.bloc-page

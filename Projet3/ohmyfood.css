@@ -160,7 +160,7 @@ i {
   background-color: #579c87;
   color: #fdcb46;
   height: 118px;
-  width: 30%;
+  width: 20%;
   border-radius: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,11 +175,6 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Montserrat-Light, sans-serif;
-}
-
-mark {
-  text-align: center;
   font-family: Montserrat-Light, sans-serif;
 }
 
@@ -282,7 +277,7 @@ a {
 }
 
 /* Code Css pour les menus en général*/
-.logomenu {
+.menuhaut {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,12 +309,12 @@ h2 {
   width: 20%;
 }
 
-.categ {
+.soulignement {
   text-align: center;
   position: relative;
 }
 
-.categ::before {
+.soulignement::before {
   content: "";
   background-color: grey;
   position: absolute;
@@ -337,7 +332,7 @@ h2 {
   transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
-.categ:hover::before {
+.soulignement:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
@@ -375,7 +370,7 @@ h2 {
   padding-bottom: 15px;
 }
 
-.logomenubas {
+.menubas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,10 +469,7 @@ i {
 
 @media all and (max-width: 1550px) {
   .box {
-    height: 375px;
     width: 275px;
-    -webkit-box-shadow: 1px 1px 12px #555;
-            box-shadow: 1px 1px 12px #555;
   }
   .trait {
     width: 30%;
@@ -492,19 +484,16 @@ i {
   .container {
     width: 80%;
     margin: auto;
-    background: red;
   }
   .box {
     margin-top: 90px;
     margin-left: 25px;
     margin-bottom: 0px;
-    height: 375px;
     width: 300px;
-    -webkit-box-shadow: 1px 1px 12px #555;
-            box-shadow: 1px 1px 12px #555;
   }
   .box5 {
     margin-top: 90px;
+    width: 300px;
   }
   .trait {
     width: 35%;
@@ -516,9 +505,6 @@ i {
 }
 
 @media all and (max-width: 1000px) {
-  .container {
-    background: green;
-  }
   .box {
     margin-left: 0px;
   }
@@ -543,14 +529,7 @@ i {
             align-items: center;
   }
   .box {
-    height: 375px;
     width: 300px;
-  }
-  .box5 {
-    width: 300px;
-  }
-  footer {
-    font-size: 1em;
   }
   .bloc-page {
     width: 70%;
