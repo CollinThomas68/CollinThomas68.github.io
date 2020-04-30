@@ -45,7 +45,7 @@ body
 
 header
 {
-	height: 200px;
+	height: 150px;
 	background-color: #579c87;
 	border-bottom: 2px solid #a1c181;
 	color:#fdcb46;
@@ -57,6 +57,10 @@ header
 	width:100%;
 }
 
+.logo
+{
+	width:300px;
+}
 .container
 {
 
@@ -73,11 +77,10 @@ header
 	justify-content:center;
 	align-items:center;
 	margin-top:90px;
-	height:600px;
+	height:375px;
 	width:300px;
 	box-shadow:1px 1px 12px #555;
 	text-align:center;
-    font-size:2em;
     overflow:hidden;
 
 }
@@ -144,22 +147,22 @@ i
 .box5
 {
 	background-color: #579c87;
-
+	color:#fdcb46;
 	height:118px;
-	width:45%;
+	width:30%;
 	border-radius:45px;
 	display:flex;
+	flex-direction:row;
 	justify-content: center;
 	align-items: center;
 	margin-top:90px;
-	font-size:2em;
+	font-family:Montserrat-Light, sans-serif;
 }
 
 mark
 {
 	text-align:center;
-	background-color: #579c87;
-	color:#fdcb46;
+
 	font-family:Montserrat-Light, sans-serif;
 }
 
@@ -194,8 +197,7 @@ footer
 	border-top: 2px solid #a1c181;
 	font-family:Montserrat-Light, sans-serif;
 	color:#fdcb46;
-	font-size:2em;
-    height:75px;
+    height:60px;
 	float:bottom;
 	position:fixed;
 	bottom:0px;
@@ -273,7 +275,7 @@ h2
 
 .categ::before{
 	content:"";
-	background-color:black;
+	background-color:grey;
 	position:absolute;
 	width:100%;
 	bottom:0;
@@ -424,8 +426,8 @@ i
 	.box
 	{
 		margin-top:90px;
-		height:650px;
-		width:550px;
+		height:375px;
+		width:275px;
 		box-shadow:1px 1px 12px #555;
 	
 	}
@@ -445,22 +447,21 @@ i
 
 @media all and (max-width:1210px)
 {
+	.container
+	{
+		width:80%;
+		margin:auto;
+		background:red;
+	}
+
 	.box
 	{
 		margin-top:90px;
-		height:486px;
-		width:400px;
+		margin-left:25px;
+		height:375px;
+		width:300px;
 		box-shadow:1px 1px 12px #555;
 	
-	}
-	.box5
-	{
-		font-size:1.2em;
-	}
-	footer 
-	{
-
-		font-size:1.5em;
 	}
 
 	.trait
@@ -477,11 +478,18 @@ i
 
 @media all and (max-width:1000px)
 {
+	.container
+	{
+		width:80%;
+		margin:auto;
+		background:green;
+	}
 	.box
 	{
 		margin-top:90px;
-		height:400px;
-		width:350px;
+		margin-left:0px;
+		height:375px;
+		width:300px;
 		box-shadow:1px 1px 12px #555;
 	
 	}
@@ -500,10 +508,7 @@ i
 
 @media  all and (max-width:790px)
 {
-	.logo
-	{
-		width:300px;
-	}
+
 
 	.container
 	{
@@ -515,8 +520,7 @@ i
 	.box
 	{
 
-		margin-top:45px;
-		height:400px;
+		height:375px;
 		width:300px;
 	}
 
