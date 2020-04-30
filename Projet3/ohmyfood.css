@@ -87,6 +87,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 200px;
+  margin-bottom: 200px;
   height: 375px;
   width: 300px;
   -webkit-box-shadow: 1px 1px 12px #555;
@@ -174,7 +175,6 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 90px;
   font-family: Montserrat-Light, sans-serif;
 }
 
@@ -497,10 +497,14 @@ i {
   .box {
     margin-top: 90px;
     margin-left: 25px;
+    margin-bottom: 0px;
     height: 375px;
     width: 300px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
+  }
+  .box5 {
+    margin-top: 90px;
   }
   .trait {
     width: 35%;
@@ -513,17 +517,10 @@ i {
 
 @media all and (max-width: 1000px) {
   .container {
-    width: 80%;
-    margin: auto;
     background: green;
   }
   .box {
-    margin-top: 90px;
     margin-left: 0px;
-    height: 375px;
-    width: 300px;
-    -webkit-box-shadow: 1px 1px 12px #555;
-            box-shadow: 1px 1px 12px #555;
   }
   .typeplat {
     -webkit-box-pack: justify;
