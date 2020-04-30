@@ -86,7 +86,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 90px;
+  margin-top: 200px;
   height: 375px;
   width: 300px;
   -webkit-box-shadow: 1px 1px 12px #555;
@@ -474,7 +474,6 @@ i {
 
 @media all and (max-width: 1550px) {
   .box {
-    margin-top: 90px;
     height: 375px;
     width: 275px;
     -webkit-box-shadow: 1px 1px 12px #555;
@@ -525,9 +524,6 @@ i {
     width: 300px;
     -webkit-box-shadow: 1px 1px 12px #555;
             box-shadow: 1px 1px 12px #555;
-  }
-  footer {
-    font-size: 1.2em;
   }
   .typeplat {
     -webkit-box-pack: justify;
