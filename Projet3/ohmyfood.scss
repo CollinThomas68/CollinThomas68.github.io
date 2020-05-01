@@ -86,11 +86,6 @@ header
 
 }
 
-strong
-{
-	font-size:1.5em;
-}
-
 .box a
 {
     text-decoration:none;
@@ -344,14 +339,7 @@ i
 /* Code Css pour le menu Le chic à la française*/
 .bloc-page2
 {
-	width: 80%;
 	background-color:#fff5fe;
-
-	margin:auto;
-	padding-left:50px;
-	padding-right:50px;
-	margin-top:125px;
-	margin-bottom:200px;
 }
 
 .bloc-page2 h1, .bloc-page2 h3
@@ -412,7 +400,28 @@ i
 	font-family:Kaushan,sans-serif;
 }
 
+/* Code Css pour les mentions légales*/
+.bloc-page5
+{
+	width:50%;
+	margin:auto;
+	text-align:center;
+}
+.bloc-page5 h1, .bloc-page5 h4
 
+{
+
+	font-family:Montserrat-Light, sans-serif;
+	color:#fdcb46;
+	background-color: #579c87;
+	width:40%;
+	margin:auto;
+}
+
+.bloc-page5 h1
+{
+	margin-top:100px;
+}
 
 @media all and (max-width:1550px)
 {
