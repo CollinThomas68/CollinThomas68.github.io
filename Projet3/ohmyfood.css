@@ -1,35 +1,40 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Montserrat-Light';
-  src: url("Fonts/Montserrat-Light.otf") format("truetype");
+  src: url("Fonts/montserrat-light-webfont.eot");
+  src: url("Fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("Fonts/montserrat-light-webfont.woff") format("woff"), url("Fonts/montserrat-light-webfont.ttf") format("truetype"), url("Fonts/montserrat-light-webfont.svg#Montserrat-Light") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'devonshire-regular';
-  src: url("Fonts/devonshire-regular.ttf") format("truetype");
+  src: url("Fonts/devonshire-regular-webfont.eot");
+  src: url("Fonts/devonshire-regular-webfont.eot?#iefix") format("embedded-opentype"), url("Fonts/devonshire-regular-webfont.woff") format("woff"), url("Fonts/devonshire-regular-webfont.ttf") format("truetype"), url("Fonts/devonshire-regular-webfont.svg#devonshire-regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CroissantOne-Regular';
-  src: url("Fonts/CroissantOne-Regular.ttf") format("truetype");
+  src: url("Fonts/croissantone-regular-webfont.eot");
+  src: url("Fonts/croissantone-regular-webfont?#iefix") format("embedded-opentype"), url("Fonts/croissantone-regular-webfont.woff") format("woff"), url("Fonts/croissantone-regular-webfont.ttf") format("truetype"), url("Fonts/croissantone-regular-webfont.svg#CroissantOne-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'gosmicksans';
-  src: url("Fonts/gosmicksans.ttf") format("truetype");
+  src: url("Fonts/gosmicksans-webfont.eot");
+  src: url("Fonts/gosmicksans-webfont?#iefix") format("embedded-opentype"), url("Fonts/gosmicksans-webfont.woff") format("woff"), url("Fonts/gosmicksans-webfont.ttf") format("truetype"), url("Fonts/gosmicksans-webfont.svg#gosmicksans") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Kaushan';
-  src: url("Fonts/KaushanScript-Regular.otf") format("truetype");
+  src: url("Fonts/kaushanscript-regular-webfont.eot");
+  src: url("Fonts/kaushanscript-regular-webfont?#iefix") format("embedded-opentype"), url("Fonts/kaushanscript-regular-webfont.woff") format("woff"), url("Fonts/kaushanscript-regular-webfont.ttf") format("truetype"), url("Fonts/kaushanscript-regular-webfont.svg#Kaushan") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -171,11 +176,11 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Montserrat-Light, sans-serif;
+  font-family: 'Montserrat-Light', sans-serif;
 }
 
 .waiting {
-  content: ".";
+  content: "";
   -webkit-animation: waiting 1s steps(5, end) infinite;
           animation: waiting 1s steps(5, end) infinite;
 }
@@ -217,7 +222,7 @@ i {
 footer {
   background-color: #579c87;
   border-top: 2px solid #a1c181;
-  font-family: Montserrat-Light, sans-serif;
+  font-family: 'Montserrat-Light', sans-serif;
   color: #fdcb46;
   height: 60px;
   float: bottom;
@@ -289,7 +294,7 @@ a {
 
 .bloc-page {
   width: 80%;
-  font-family: gosmicksans,sans-serif;
+  font-family: 'gosmicksans',sans-serif;
   margin: auto;
   padding-left: 50px;
   padding-right: 50px;
@@ -351,6 +356,10 @@ h2 {
   width: 20%;
 }
 
+article {
+  padding-bottom: 20px;
+}
+
 .produit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,7 +399,7 @@ h2 {
 }
 
 .bloc-page1 h1, .bloc-page1 h3 {
-  font-family: devonshire-regular, sans-serif;
+  font-family: 'devonshire-regular', sans-serif;
 }
 
 i {
@@ -410,7 +419,7 @@ i {
 }
 
 .bloc-page2 h1, .bloc-page2 h3 {
-  font-family: CroissantOne-regular, sans-serif;
+  font-family: 'CroissantOne-regular', sans-serif;
 }
 
 .chic {
@@ -438,7 +447,7 @@ i {
 }
 
 .bloc-page3 h1, .bloc-page3 h3 {
-  font-family: Kaushan,sans-serif;
+  font-family: 'Kaushan',sans-serif;
 }
 
 .delice {
@@ -462,12 +471,12 @@ i {
   width: 50%;
   margin: auto;
   text-align: center;
-  margin-bottom: 200px;
+  margin-bottom: 180px;
   margin-top: 125px;
 }
 
 .bloc-page5 h1, .bloc-page5 h4 {
-  font-family: Montserrat-Light, sans-serif;
+  font-family: 'Montserrat-Light', sans-serif;
   color: #fdcb46;
   background-color: #579c87;
   width: 40%;
