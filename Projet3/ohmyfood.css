@@ -152,9 +152,6 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
 }
 
 .box5 {
@@ -363,9 +360,6 @@ article {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
   padding-left: 25%;
   padding-right: 25%;
   padding-bottom: 15px;
