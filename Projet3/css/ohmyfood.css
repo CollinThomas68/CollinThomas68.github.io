@@ -80,6 +80,22 @@ header {
   overflow: hidden;
 }
 
+.box--1 {
+  background-color: #fcdfdb;
+}
+
+.box--2 {
+  background-color: #fff5fe;
+}
+
+.box--3 {
+  background-color: #f9f9f9;
+}
+
+.box--4 {
+  background-color: #fdfffd;
+}
+
 .box a {
   text-decoration: none;
   transform: scale(1);
@@ -95,26 +111,10 @@ header {
   width: 100%;
 }
 
-.box--1 {
-  background-color: #fcdfdb;
-}
-
 i {
   background: linear-gradient(90deg, #f04a5e, #f78f6a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.box--2 {
-  background-color: #fff5fe;
-}
-
-.box--3 {
-  background-color: #f9f9f9;
-}
-
-.box--4 {
-  background-color: #fdfffd;
 }
 
 .bientot {
@@ -123,19 +123,16 @@ i {
   justify-content: center;
 }
 
-.box5 {
+.bientot .box5 {
   background-color: #579c87;
   color: #fdcb46;
   height: 80px;
   width: 20%;
   border-radius: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Montserrat-Light', sans-serif;
 }
 
-.waiting {
+.bientot .box5 .waiting {
   content: "";
   animation: waiting 1s steps(5, end) infinite;
 }
@@ -161,7 +158,6 @@ footer {
   background-color: #579c87;
   border-top: 2px solid #a1c181;
   font-family: 'Montserrat-Light', sans-serif;
-  color: #fdcb46;
   height: 60px;
   float: bottom;
   position: fixed;
@@ -172,12 +168,12 @@ footer {
   align-items: center;
 }
 
-.wiggle {
+footer .wiggle {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.wiggle:hover {
+footer .wiggle:hover {
   animation: shake 450ms infinite;
 }
 
