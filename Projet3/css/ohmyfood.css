@@ -123,16 +123,19 @@ i {
   justify-content: center;
 }
 
-.bientot .box5 {
+.box5 {
   background-color: #579c87;
   color: #fdcb46;
   height: 80px;
   width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 45px;
   font-family: 'Montserrat-Light', sans-serif;
 }
 
-.bientot .box5 .waiting {
+.waiting {
   content: "";
   animation: waiting 1s steps(5, end) infinite;
 }
