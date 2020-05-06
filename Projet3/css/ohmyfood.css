@@ -71,8 +71,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   height: 375px;
   width: 300px;
   box-shadow: 1px 1px 12px #555;
@@ -118,7 +118,7 @@ i {
 }
 
 .bientot {
-  height: 300px;
+  height: 200px;
   display: flex;
   justify-content: center;
 }
@@ -126,11 +126,11 @@ i {
 .box5 {
   background-color: #579c87;
   color: #fdcb46;
-  height: 80px;
+  height: 50px;
   width: 20%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 10px;
   border-radius: 45px;
   font-family: 'Montserrat-Light', sans-serif;
 }
@@ -217,7 +217,7 @@ h1, h2, h3 {
 }
 
 h2 {
-  width: 20%;
+  width: 35%;
 }
 
 .soulignement {
@@ -338,6 +338,7 @@ i {
 /* Code Css pour le menu La palette du goût*/
 .bloc-page4 {
   background-color: #fdfffd;
+  box-shadow: 1px 1px 12px #555;
 }
 
 .bloc-page4 h1, .bloc-page4 h3 {
@@ -365,8 +366,8 @@ i {
   .box {
     width: 275px;
   }
-  .trait {
-    width: 30%;
+  .bientot {
+    height: 250px;
   }
   .produit {
     padding-left: 15%;
@@ -389,9 +390,6 @@ i {
     margin-top: 90px;
     width: 300px;
   }
-  .trait {
-    width: 35%;
-  }
   .produit {
     padding-left: 10%;
     padding-right: 10%;
@@ -401,6 +399,9 @@ i {
 @media all and (max-width: 1000px) {
   .box {
     margin-left: 0px;
+  }
+  h2 {
+    width: 45%;
   }
   .typeplat {
     justify-content: space-between;
@@ -418,9 +419,6 @@ i {
   }
   .bloc-page {
     width: 70%;
-  }
-  .trait {
-    width: 20%;
   }
   h2 {
     width: 50%;
