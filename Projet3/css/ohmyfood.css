@@ -136,7 +136,6 @@ i {
 }
 
 .waiting {
-  content: "";
   animation: waiting 1s steps(5, end) infinite;
 }
 
@@ -210,6 +209,7 @@ a {
   padding-right: 50px;
   margin-top: 125px;
   margin-bottom: 200px;
+  box-shadow: 1px 1px 12px #555;
 }
 
 h1, h2, h3 {
@@ -338,7 +338,6 @@ i {
 /* Code Css pour le menu La palette du goût*/
 .bloc-page4 {
   background-color: #fdfffd;
-  box-shadow: 1px 1px 12px #555;
 }
 
 .bloc-page4 h1, .bloc-page4 h3 {
@@ -381,7 +380,7 @@ i {
     margin: auto;
   }
   .box {
-    margin-top: 90px;
+    margin-top: 100px;
     margin-left: 25px;
     margin-bottom: 0px;
     width: 300px;

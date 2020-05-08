@@ -97,30 +97,28 @@ header
 	width:300px;
 	box-shadow:1px 1px 12px #555;
 	text-align:center;
-    overflow:hidden;
-}
-.box--1{
-	background-color:#fcdfdb;
-}
-.box--2{
-	background-color:#fff5fe;
-}
-.box--3{
-	background-color:#f9f9f9;
-}
-.box--4{
-	background-color:#fdfffd;
-}
-
-.box a
-{
-    text-decoration:none;
-    transform:scale(1);
-    transition: transform 400ms;
-    &:hover{
-        transform:scale(1.20);
-        opacity:0.5;
-    }
+	overflow:hidden;
+	&--1{
+		background-color:#fcdfdb;
+	}
+	&--2{
+		background-color:#fff5fe;
+	}
+	&--3{
+		background-color:#f9f9f9;
+	}
+	&--4{
+		background-color:#fdfffd;
+	}
+	a{
+		text-decoration:none;
+		transform:scale(1);
+		transition: transform 400ms;
+		&:hover{
+			transform:scale(1.20);
+			opacity:0.5;
+		}
+	}
 }
 
 .box img
@@ -157,7 +155,7 @@ i
 }
 .waiting
 {
-	content: "";
+
 	animation: waiting 1s steps(5,end) infinite;
 }
 
@@ -239,6 +237,7 @@ color:#fdcb46;
 	padding-right:50px;
 	margin-top:125px;
 	margin-bottom:200px;
+	box-shadow:1px 1px 12px #555;
 }
 
 h1,h2,h3
@@ -392,7 +391,6 @@ i
 .bloc-page4
 {
 	background-color:#fdfffd;
-	box-shadow:1px 1px 12px #555;
 
 }
 
@@ -451,7 +449,7 @@ i
 
 	.box
 	{
-		margin-top:90px;
+		margin-top:100px;
 		margin-left:25px;
 		margin-bottom:0px;
 		width:300px;
