@@ -416,6 +416,8 @@ i {
   }
   .typeplat {
     justify-content: space-between;
+    border: 2px solid black;
+    margin: 0px;
   }
 }
 
@@ -431,12 +433,17 @@ i {
   .bloc-page {
     width: 70%;
   }
+  .typeplat {
+    border: 2px solid black;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   h2 {
     width: 55%;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .trait {
-    width: 17%;
+    width: 15%;
   }
   .produit {
     padding-left: 5%;
