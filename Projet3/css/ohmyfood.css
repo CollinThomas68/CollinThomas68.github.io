@@ -67,6 +67,14 @@ header {
   flex-wrap: wrap;
 }
 
+.container h2 {
+  display: none;
+}
+
+.box h3 {
+  display: none;
+}
+
 .box {
   display: flex;
   justify-content: center;
@@ -121,6 +129,10 @@ i {
   height: 200px;
   display: flex;
   justify-content: center;
+}
+
+.bientot h2 {
+  display: none;
 }
 
 .box5 {
@@ -420,7 +432,7 @@ i {
     width: 70%;
   }
   h2 {
-    width: 60%;
+    width: 55%;
     font-size: 0.9em;
   }
   .produit {

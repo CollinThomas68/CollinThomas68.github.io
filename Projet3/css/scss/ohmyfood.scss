@@ -1,4 +1,3 @@
-
 @font-face { 
     font-family: 'Montserrat-Light';
     src: url('../Fonts/montserrat-light-webfont.eot');
@@ -84,8 +83,15 @@ header
 	display:flex;
 	justify-content:space-evenly;
 	flex-wrap: wrap;
+	h2{
+		display:none;
+	}
 }
 
+
+.box h3{
+	display:none;
+}
 .box 
 {
 	display:flex;
@@ -138,6 +144,9 @@ i
 	height:200px;
 	display:flex;
 	justify-content: center;
+	h2{
+		display:none;
+	}
 
 }
 
@@ -155,7 +164,6 @@ i
 }
 .waiting
 {
-
 	animation: waiting 1s steps(5,end) infinite;
 }
 
