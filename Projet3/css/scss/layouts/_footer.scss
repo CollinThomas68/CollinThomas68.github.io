@@ -1,0 +1,40 @@
+footer
+{
+	background-color: $color-primary;
+	border-top: 2px solid #a1c181;
+	font-family:'Montserrat-Light', sans-serif;
+    height:60px;
+	float:bottom;
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	display:flex; 
+	justify-content:space-between;
+	align-items:center;
+	a{
+		text-decoration:none;
+		color:$color-secondary;
+	}
+	.wiggle{
+		padding-left:25px;
+		padding-right:25px;
+		&:hover{
+       		animation: shake 450ms infinite ;
+		}
+	}
+}
+
+
+
+
+
+@keyframes shake {
+    25% {
+        // rotation vers la droite
+        transform: rotate($shake-intensity);
+    }
+    75% {
+        // rotation vers la gauche
+        transform: rotate($shake-intensity * -1);
+    }
+}

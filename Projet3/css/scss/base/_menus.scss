@@ -1,0 +1,92 @@
+
+/* Code Css pour les menus en général*/
+.menuhaut
+{
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	padding-top:75px;
+}
+.bloc-page
+{
+	width: 80%;
+	font-family:'gosmicksans',sans-serif;
+	margin:auto;
+	padding-left:50px;
+	padding-right:50px;
+	margin-top:125px;
+	margin-bottom:200px;
+	@include ombre-carte;
+}
+
+h1,h2,h3
+{
+	text-align:center;
+
+}
+
+.bloc-page h2
+{
+
+	width:35%;
+}
+
+.soulignement{
+
+	text-align:center;
+	position:relative;
+}
+
+.soulignement::before{
+	content:"";
+	background-color:grey;
+	position:absolute;
+	width:100%;
+	bottom:0;
+	left: 0;
+	height:2px;
+	transform:scaleX(0);
+	transform-origin: bottom left;
+	transition:transform 1000ms ease-in-out;
+}
+.soulignement:hover::before{
+	transform:scaleX(1);
+	transform-origin:bottom left;
+}
+
+
+.typeplat
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.trait
+{
+	width:10%;
+}
+
+article
+{
+	padding-bottom:20px;
+}
+.produit 
+{
+	display:flex;
+	justify-content:space-between;
+	padding-left:25%;
+	padding-right:25%;
+	padding-bottom:15px;
+
+}
+
+.menubas
+{
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items:center;
+	padding-top:75px;
+	padding-bottom:50px;
+}

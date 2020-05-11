@@ -1,0 +1,30 @@
+/* Code Css pour le menu Le chic à la française*/
+.bloc-page2
+{
+	background-color:#fff5fe;
+}
+
+.bloc-page2 h1, .bloc-page2 h3
+{
+	font-family:'CroissantOne-regular', sans-serif;
+}
+
+.chic
+{
+	@include color-linear-chic;
+}
+
+.chic1
+{
+	color:#c67412;
+}
+
+.chic2
+{
+	color:#a56799;
+}
+
+.chic3
+{
+	color: #6e4ccc;
+}

@@ -1,0 +1,21 @@
+/* Code Css pour le menu La note enchantée*/
+.bloc-page1
+{
+	background-color:#fcdfdb;
+}
+
+.bloc-page1 h1, .bloc-page1 h3
+{
+	font-family:'devonshire-regular', sans-serif;
+	color:black;
+}
+
+i 
+{
+	@include color-linear-note; 
+}
+
+.fa-3x
+{
+	padding-right:10px;
+}

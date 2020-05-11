@@ -1,0 +1,39 @@
+@mixin police-note{	
+    font-family:'devonshire-regular', sans-serif;
+}
+
+@mixin police-chic{
+    font-family:'CroissantOne-regular', sans-serif;
+}
+
+@mixin police-delice-palette{
+    font-family: Kaushan,sans-serif;
+}
+
+@mixin ombre-carte{
+    box-shadow:1px 1px 12px #555;
+}
+
+@mixin color-linear-note{
+    background: linear-gradient(90deg, #f04a5e, #f78f6a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin color-linear-chic{
+    background: linear-gradient(90deg, #d17f45, #8f5bfe);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+}
+
+@mixin color-linear-delice{
+    background: linear-gradient(90deg, #0a36e0, #2797f9);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+}
+
+@mixin color-linear-palette{
+    background: linear-gradient(90deg, #56a847, #bfff7e);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+}

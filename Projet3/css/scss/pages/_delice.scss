@@ -1,0 +1,16 @@
+/* Code Css pour le menu Le délice des papilles*/
+.bloc-page3
+{
+	background-color:#edefef;
+
+}
+
+.bloc-page3 h1, .bloc-page3 h3
+{
+	font-family:'Kaushan',sans-serif;
+}
+
+.delice
+{
+	@include color-linear-delice;
+}
