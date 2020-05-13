@@ -8,8 +8,10 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch ./css/sass/ohmyfood.scss:./css/ohmyfood.css"
+    "sass": "sass --watch ./css/sass/ohmyfood.scss:./css/ohmyfood.css",
+    "prefix": "postcss ./css/ohmyfood.css --use autoprefixer -d ./css/prefixed/"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }
