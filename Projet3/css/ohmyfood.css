@@ -1,44 +1,39 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'Montserrat-Light';
+  font-family: "Montserrat-Light";
   src: url("../Fonts/montserrat-light-webfont.eot");
   src: url("../Fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../Fonts/montserrat-light-webfont.woff") format("woff"), url("../Fonts/montserrat-light-webfont.ttf") format("truetype"), url("../Fonts/montserrat-light-webfont.svg#Montserrat-Light") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'devonshire-regular';
+  font-family: "devonshire-regular";
   src: url("../Fonts/devonshire-regular-webfont.eot");
   src: url("../Fonts/devonshire-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../Fonts/devonshire-regular-webfont.woff") format("woff"), url("../Fonts/devonshire-regular-webfont.ttf") format("truetype"), url("../Fonts/devonshire-regular-webfont.svg#devonshire-regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'CroissantOne-Regular';
+  font-family: "CroissantOne-Regular";
   src: url("../Fonts/croissantone-regular-webfont.eot");
   src: url("../Fonts/croissantone-regular-webfont?#iefix") format("embedded-opentype"), url("../Fonts/croissantone-regular-webfont.woff") format("woff"), url("../Fonts/croissantone-regular-webfont.ttf") format("truetype"), url("../Fonts/croissantone-regular-webfont.svg#CroissantOne-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'gosmicksans';
+  font-family: "gosmicksans";
   src: url("../Fonts/gosmicksans-webfont.eot");
   src: url("../Fonts/gosmicksans-webfont?#iefix") format("embedded-opentype"), url("../Fonts/gosmicksans-webfont.woff") format("woff"), url("../Fonts/gosmicksans-webfont.ttf") format("truetype"), url("../Fonts/gosmicksans-webfont.svg#gosmicksans") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Kaushan';
+  font-family: "Kaushan";
   src: url("../Fonts/kaushanscript-regular-webfont.eot");
   src: url("../Fonts/kaushanscript-regular-webfont?#iefix") format("embedded-opentype"), url("../Fonts/kaushanscript-regular-webfont.woff") format("woff"), url("../Fonts/kaushanscript-regular-webfont.ttf") format("truetype"), url("../Fonts/kaushanscript-regular-webfont.svg#Kaushan") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 /* Les variables*/
 body {
   margin-left: 0px;
@@ -84,73 +79,59 @@ header {
   text-align: center;
   overflow: hidden;
 }
-
 .box--1 {
   background-color: #fcdfdb;
 }
-
 .box--1 h2 {
-  font-family: 'devonshire-regular', sans-serif;
+  font-family: "devonshire-regular", sans-serif;
   color: #3c1218;
   font-size: 1.5em;
 }
-
 .box--1 h3 {
   color: #3c1218;
 }
-
 .box--2 {
   background-color: #fff5fe;
 }
-
 .box--2 h2 {
-  font-family: 'CroissantOne-regular', sans-serif;
+  font-family: "CroissantOne-regular", sans-serif;
   background: linear-gradient(90deg, #d17f45, #8f5bfe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.2em;
 }
-
 .box--2 h3 {
   color: #c77412;
 }
-
 .box--3 {
   background-color: #f9f9f9;
 }
-
 .box--3 h2 {
-  font-family: Kaushan,sans-serif;
+  font-family: Kaushan, sans-serif;
   background: linear-gradient(90deg, #0a36e0, #2797f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .box--3 h3 {
   color: #0887fb;
 }
-
 .box--4 {
   background-color: #fdfffd;
 }
-
 .box--4 h2 {
-  font-family: Kaushan,sans-serif;
+  font-family: Kaushan, sans-serif;
   background: linear-gradient(90deg, #56a847, #bfff7e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .box--4 h3 {
   color: #72bf56;
 }
-
 .box a {
   text-decoration: none;
   transform: scale(1);
   transition: transform 400ms;
 }
-
 .box a:hover {
   transform: scale(1.2);
   opacity: 0.5;
@@ -177,7 +158,7 @@ i {
   justify-content: center;
   padding-top: 10px;
   border-radius: 45px;
-  font-family: 'Montserrat-Light', sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
 }
 
 .waiting {
@@ -200,11 +181,10 @@ i {
     text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 #fdcb46;
   }
 }
-
 footer {
   background-color: #579c87;
   border-top: 2px solid #a1c181;
-  font-family: 'Montserrat-Light', sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   height: 60px;
   float: bottom;
   position: fixed;
@@ -214,17 +194,14 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-
 footer a {
   text-decoration: none;
   color: #fdcb46;
 }
-
 footer .wiggle {
   padding-left: 25px;
   padding-right: 25px;
 }
-
 footer .wiggle:hover {
   animation: shake 450ms infinite;
 }
@@ -237,7 +214,6 @@ footer .wiggle:hover {
     transform: rotate(-5deg);
   }
 }
-
 /* Code Css pour les menus en général*/
 .menuhaut {
   display: flex;
@@ -248,7 +224,7 @@ footer .wiggle:hover {
 
 .bloc-page {
   width: 80%;
-  font-family: 'gosmicksans',sans-serif;
+  font-family: "gosmicksans", sans-serif;
   margin: auto;
   padding-left: 50px;
   padding-right: 50px;
@@ -325,7 +301,7 @@ article {
 }
 
 .bloc-page1 h1, .bloc-page1 h3 {
-  font-family: 'devonshire-regular', sans-serif;
+  font-family: "devonshire-regular", sans-serif;
   color: black;
 }
 
@@ -345,7 +321,7 @@ i {
 }
 
 .bloc-page2 h1, .bloc-page2 h3 {
-  font-family: 'CroissantOne-regular', sans-serif;
+  font-family: "CroissantOne-regular", sans-serif;
 }
 
 .chic {
@@ -372,7 +348,7 @@ i {
 }
 
 .bloc-page3 h1, .bloc-page3 h3 {
-  font-family: 'Kaushan',sans-serif;
+  font-family: "Kaushan", sans-serif;
 }
 
 .delice {
@@ -387,7 +363,7 @@ i {
 }
 
 .bloc-page4 h1, .bloc-page4 h3 {
-  font-family: 'Kaushan',sans-serif;
+  font-family: "Kaushan", sans-serif;
 }
 
 .palette {
@@ -406,7 +382,7 @@ i {
 }
 
 .bloc-page5 h1, .bloc-page5 h4 {
-  font-family: 'Montserrat-Light', sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
   color: #fdcb46;
   background-color: #579c87;
   width: 300px;
@@ -423,76 +399,89 @@ i {
   .box {
     width: 275px;
   }
+
   .bientot {
     height: 250px;
   }
+
   .produit {
     padding-left: 15%;
     padding-right: 15%;
   }
 }
-
 @media all and (max-width: 1210px) {
   .container {
     width: 80%;
     margin: auto;
   }
+
   .box {
     margin-top: 100px;
     margin-left: 25px;
     margin-bottom: 0px;
     width: 300px;
   }
+
   .box5 {
     margin-top: 90px;
     width: 300px;
   }
+
   .produit {
     padding-left: 10%;
     padding-right: 10%;
   }
 }
-
 @media all and (max-width: 1000px) {
   .box {
     margin-left: 0px;
   }
+
   .bloc-page h2 {
     width: 45%;
   }
+
   .typeplat {
     justify-content: space-between;
   }
 }
-
 @media all and (max-width: 790px) {
   .container {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
+
   .box {
     width: 300px;
   }
+
   .bloc-page {
     width: 70%;
   }
+
   .typeplat {
     margin-left: -30px;
     margin-right: -30px;
   }
+
   .bloc-page h2 {
     width: 60%;
     font-size: 1em;
   }
+
   .trait {
     width: 15%;
   }
+
   .produit {
     padding-left: 5%;
     padding-right: 5%;
   }
+
   .prix {
     padding-left: 25px;
   }
 }
+
+/*# sourceMappingURL=ohmyfood.css.map */
