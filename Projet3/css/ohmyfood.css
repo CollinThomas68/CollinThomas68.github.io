@@ -68,6 +68,10 @@ header {
   flex-wrap: wrap;
 }
 
+.invisible {
+  display: none;
+}
+
 .box {
   display: flex;
   justify-content: center;
@@ -85,7 +89,7 @@ header {
   background-color: #fcdfdb;
 }
 
-.box--1 h1 {
+.box--1 h2 {
   font-family: 'devonshire-regular', sans-serif;
   color: #3c1218;
   font-size: 1.5em;
@@ -99,11 +103,12 @@ header {
   background-color: #fff5fe;
 }
 
-.box--2 h1 {
+.box--2 h2 {
   font-family: 'CroissantOne-regular', sans-serif;
   background: linear-gradient(90deg, #d17f45, #8f5bfe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.2em;
 }
 
 .box--2 h3 {
@@ -114,7 +119,7 @@ header {
   background-color: #f9f9f9;
 }
 
-.box--3 h1 {
+.box--3 h2 {
   font-family: Kaushan,sans-serif;
   background: linear-gradient(90deg, #0a36e0, #2797f9);
   -webkit-background-clip: text;
@@ -129,7 +134,7 @@ header {
   background-color: #fdfffd;
 }
 
-.box--4 h1 {
+.box--4 h2 {
   font-family: Kaushan,sans-serif;
   background: linear-gradient(90deg, #56a847, #bfff7e);
   -webkit-background-clip: text;
@@ -161,10 +166,6 @@ i {
   height: 200px;
   display: flex;
   justify-content: center;
-}
-
-.bientot h2 {
-  display: none;
 }
 
 .box5 {
@@ -387,6 +388,29 @@ i {
 
 .bloc-page4 h1, .bloc-page4 h3 {
   font-family: 'Kaushan',sans-serif;
+}
+
+/* Code Css pour les mentions légales*/
+.bloc-page5 {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 180px;
+  margin-top: 125px;
+}
+
+.bloc-page5 h1, .bloc-page5 h4 {
+  font-family: 'Montserrat-Light', sans-serif;
+  color: #fdcb46;
+  background-color: #579c87;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 25px;
+  height: 50px;
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media all and (max-width: 1550px) {
