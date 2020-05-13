@@ -10,3 +10,8 @@
 {
 	font-family:'Kaushan',sans-serif;
 }
+
+.palette
+{
+	@include color-linear-palette;
+}

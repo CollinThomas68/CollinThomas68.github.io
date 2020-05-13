@@ -390,6 +390,12 @@ i {
   font-family: 'Kaushan',sans-serif;
 }
 
+.palette {
+  background: linear-gradient(90deg, #56a847, #bfff7e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Code Css pour les mentions légales*/
 .bloc-page5 {
   width: 50%;
