@@ -246,7 +246,7 @@ h1, h2, h3 {
   position: relative;
 }
 
-.soulignement::before {
+.soulignement::after {
   content: "";
   background-color: grey;
   position: absolute;
@@ -259,7 +259,7 @@ h1, h2, h3 {
   transition: transform 1000ms ease-in-out;
 }
 
-.soulignement:hover::before {
+.soulignement:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
