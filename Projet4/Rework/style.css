@@ -56,6 +56,9 @@ a:hover {
     padding: 20px 50px;
 }
 
+.citation{
+    font-size:1.1em;
+}
 .bg-center,
 .bg-l-edge,
 .bg-r-edge,
@@ -702,6 +705,7 @@ p {
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+    padding-bottom: 25px;
 }
 
 h2 {
@@ -741,6 +745,7 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    margin:auto;
 }
 
 .portfolio-row {
