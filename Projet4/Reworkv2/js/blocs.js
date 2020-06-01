@@ -111,7 +111,7 @@ function inViewCheck() {
 function scrollToTopView() {
     $(window).scrollTop() > $(window).height() / 3 ? $(".scrollToTop").hasClass("showScrollTop") || $(".scrollToTop").addClass("showScrollTop") : $(".scrollToTop").removeClass("showScrollTop")
 }
-
+/*
 function setUpVisibilityToggle() {
     $(document).on("click", "[data-toggle-visibility]", function(t) {
         t.preventDefault();
@@ -128,7 +128,7 @@ function setUpVisibilityToggle() {
         }
     })
 }
-
+*/
 function setUpLightBox() {
     window.targetLightbox, $(document).on("click", "[data-lightbox]", function(t) {
         t.preventDefault(), targetLightbox = $(this);
