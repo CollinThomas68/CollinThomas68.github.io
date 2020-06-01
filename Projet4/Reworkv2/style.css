@@ -163,11 +163,14 @@ blockquote footer{
 .d-bloc p a:hover {
     color: rgba(0, 0, 0, 1);
 }
-
+*/
 .d-bloc .navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
 }
-
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+/*
 .d-bloc .btn-wire,
 .d-bloc .btn-wire:hover {
     color: rgba(255, 255, 255, 1);
@@ -262,7 +265,7 @@ blockquote footer{
 .l-bloc p a:hover {
     color: rgba(0, 0, 0, 1);
 }
-
+*/
 .l-bloc .navbar-toggle .icon-bar {
     color: rgba(0, 0, 0, .6);
 }
@@ -274,7 +277,7 @@ blockquote footer{
     color: rgba(0, 0, 0, .7);
     border-color: rgba(0, 0, 0, .3);
 }
-*/
+
 .voffset {
     margin-top: 30px;
 }
@@ -351,6 +354,10 @@ blockquote footer{
 .navbar-toggle {
     margin: 10px 10px 0 0;
     border: 0px;
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    border-radius: 4px;
 }
 
 .navbar-toggle:hover {
@@ -360,6 +367,11 @@ blockquote footer{
 .navbar-toggle .icon-bar {
     background-color: rgba(0, 0, 0, .5);
     width: 26px;
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    padding-top:2px;
+
 }
 
 .nav-invert .navbar .nav {
@@ -419,7 +431,7 @@ blockquote footer{
     display: block;
     padding: 14px 15px;
 }
-/*
+
 nav .caret {
     margin: 0 5px;
 }
@@ -445,7 +457,7 @@ nav .caret {
     margin: 6px -5px 0 0!important;
     float: right;
 }
-*/
+
 .mg-md {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -473,6 +485,8 @@ nav .caret {
 
 button {
     outline: none!important;
+    width:50px;
+    height:50px;
 }
 
 .btn-rd {
@@ -553,7 +567,6 @@ a[data-lightbox]:hover::before {
     font-size: 32px;
     width: 50px;
     height: 50px;
-    margin-left: -25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
@@ -561,8 +574,8 @@ a[data-lightbox]:hover::before {
     z-index: 1;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    transform: translate(135px,-25px);
+    -webkit-transform: translate(135px,-25px);
 }
 
 a[data-lightbox]:hover img {
@@ -692,7 +705,7 @@ p {
 }
 
 .tight-width-whitespace {
-    max-width: 600px;
+    max-width: 900px;
     margin: auto auto auto auto;
 }
 
@@ -888,12 +901,12 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    /*
+    
     .bloc {
         padding-left: constant(safe-area-inset-left);
         padding-right: constant(safe-area-inset-right);
     }
-    */
+    
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -901,7 +914,7 @@ h4 {
     }
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 20px;/*
+        padding: 0 20px;
         padding-left: constant(safe-area-inset-left);
         padding-right: constant(safe-area-inset-right);*/
     }
