@@ -102,10 +102,6 @@ a:hover {
     background-attachment: fixed;
 }
 
-cite{
-    color:#000000;
-}
-/*
 .d-bloc {
     color: rgba(255, 255, 255, .7);
 }
@@ -157,7 +153,7 @@ cite{
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -270,7 +266,7 @@ cite{
     color: rgba(0, 0, 0, .7);
     border-color: rgba(0, 0, 0, .3);
 }
-*/
+
 .voffset {
     margin-top: 30px;
 }
@@ -278,7 +274,7 @@ cite{
 .voffset-lg {
     margin-top: 80px;
 }
-/*
+
 .row-no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -289,7 +285,7 @@ cite{
     padding-right: 0;
     padding-left: 0;
 }
-*/
+
 #bloc-1-hero h1 {
     font-size: 32px;
 }
@@ -415,7 +411,7 @@ cite{
     display: block;
     padding: 14px 15px;
 }
-/*
+
 nav .caret {
     margin: 0 5px;
 }
@@ -441,7 +437,7 @@ nav .caret {
     margin: 6px -5px 0 0!important;
     float: right;
 }
-*/
+
 .mg-md {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -658,13 +654,13 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #000000!important;
+    color: #575757!important;
 }
 
 .container {
     max-width: 1000px;
 }
-/*
+
 .hero-bloc-text {
     font-size: 38px;
 }
@@ -682,7 +678,7 @@ a {
     max-width: 520px;
     margin: auto auto auto auto;
 }
-*/
+
 p {
     font-size: 15px;
 }
@@ -699,7 +695,7 @@ p {
 
 .cta-hero {
     margin-top: 22px;
-    color: #000000!important;
+    color: #FFFFFF!important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
@@ -792,12 +788,12 @@ h4 {
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #000000!important;
+    color: #FFFFFF!important;
 }
 
 .btn-atomic-tangerine:hover {
     background: #c27956!important;
-    color: #000000!important;
+    color: #FFFFFF!important;
 }
 
 .ltc-white {
