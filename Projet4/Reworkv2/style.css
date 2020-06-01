@@ -109,6 +109,12 @@ blockquote footer{
 .border{
     border :2px solid black;
 }
+
+.col-xs-3{
+    width:25%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 /*
 .d-bloc {
     color: rgba(255, 255, 255, .7);
@@ -297,6 +303,7 @@ blockquote footer{
     padding-left: 0;
 }
 */
+
 #bloc-1-hero h1 {
     font-size: 32px;
 }
@@ -314,7 +321,15 @@ blockquote footer{
     font-weight: 600;
     line-height: 44px;
 }
-
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
 .navbar-brand img {
     max-height: 200px;
     margin: 0 5px 0 0;
@@ -340,8 +355,15 @@ blockquote footer{
     float: left;
     margin-top: 4px;
     font-size: 16px;
+    position: relative;
+    display: block;
 }
 
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
 .navbar-nav .open .dropdown-menu > li > a {
     text-align: inherit;
 }
@@ -424,6 +446,22 @@ blockquote footer{
         float: none;
         margin: 10px auto 0;
     }
+    .navbar-collapse {
+        width: auto;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-collapse.collapse {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
+    button{
+        display:none;
+    }
+}
 }
 
 .nav > li > .dropdown a {
@@ -1069,5 +1107,8 @@ h4 {
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
+    }
+    .navbar-header{
+        width:100%;
     }
 }
