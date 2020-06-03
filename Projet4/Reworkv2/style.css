@@ -26,6 +26,9 @@ a:hover {
     z-index: 100000;
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
+.logo{
+    width:100px;
+}
 
 .bloc {
     width: 100%;
@@ -1106,6 +1109,9 @@ h4 {
     .col-sm-12 img{
         width:100%;
         max-width:320px;
+    }
+    .col-sm-12 .logo{
+        width:100px;
     }
 }
 
