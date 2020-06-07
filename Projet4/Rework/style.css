@@ -26,6 +26,9 @@ a:hover {
     z-index: 100000;
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
+.logo{
+    width:100px;
+}
 
 .bloc {
     width: 100%;
@@ -109,6 +112,13 @@ blockquote footer{
 .border{
     border :2px solid black;
 }
+
+.col-xs-3{
+    width:25%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 /*
 .d-bloc {
     color: rgba(255, 255, 255, .7);
@@ -163,11 +173,14 @@ blockquote footer{
 .d-bloc p a:hover {
     color: rgba(0, 0, 0, 1);
 }
-
+*/
 .d-bloc .navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
 }
-
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+/*
 .d-bloc .btn-wire,
 .d-bloc .btn-wire:hover {
     color: rgba(255, 255, 255, 1);
@@ -262,7 +275,7 @@ blockquote footer{
 .l-bloc p a:hover {
     color: rgba(0, 0, 0, 1);
 }
-
+*/
 .l-bloc .navbar-toggle .icon-bar {
     color: rgba(0, 0, 0, .6);
 }
@@ -274,7 +287,7 @@ blockquote footer{
     color: rgba(0, 0, 0, .7);
     border-color: rgba(0, 0, 0, .3);
 }
-*/
+
 .voffset {
     margin-top: 30px;
 }
@@ -294,6 +307,7 @@ blockquote footer{
     padding-left: 0;
 }
 */
+
 #bloc-1-hero h1 {
     font-size: 32px;
 }
@@ -311,7 +325,15 @@ blockquote footer{
     font-weight: 600;
     line-height: 44px;
 }
-
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
 .navbar-brand img {
     max-height: 200px;
     margin: 0 5px 0 0;
@@ -337,8 +359,15 @@ blockquote footer{
     float: left;
     margin-top: 4px;
     font-size: 16px;
+    position: relative;
+    display: block;
 }
 
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
 .navbar-nav .open .dropdown-menu > li > a {
     text-align: inherit;
 }
@@ -351,6 +380,10 @@ blockquote footer{
 .navbar-toggle {
     margin: 10px 10px 0 0;
     border: 0px;
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    border-radius: 4px;
 }
 
 .navbar-toggle:hover {
@@ -360,6 +393,11 @@ blockquote footer{
 .navbar-toggle .icon-bar {
     background-color: rgba(0, 0, 0, .5);
     width: 26px;
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    padding-top:2px;
+
 }
 
 .nav-invert .navbar .nav {
@@ -412,14 +450,30 @@ blockquote footer{
         float: none;
         margin: 10px auto 0;
     }
+    .navbar-collapse {
+        width: auto;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-collapse.collapse {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
+    button{
+        display:none;
+    }
 }
+
 
 .nav > li > .dropdown a {
     background: none!important;
     display: block;
     padding: 14px 15px;
 }
-/*
+
 nav .caret {
     margin: 0 5px;
 }
@@ -445,7 +499,7 @@ nav .caret {
     margin: 6px -5px 0 0!important;
     float: right;
 }
-*/
+
 .mg-md {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -473,6 +527,8 @@ nav .caret {
 
 button {
     outline: none!important;
+    width:50px;
+    height:50px;
 }
 
 .btn-rd {
@@ -553,7 +609,6 @@ a[data-lightbox]:hover::before {
     font-size: 32px;
     width: 50px;
     height: 50px;
-    margin-left: -25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
@@ -561,8 +616,8 @@ a[data-lightbox]:hover::before {
     z-index: 1;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    transform: translate(135px,-25px);
+    -webkit-transform: translate(135px,-25px);
 }
 
 a[data-lightbox]:hover img {
@@ -692,7 +747,7 @@ p {
 }
 
 .tight-width-whitespace {
-    max-width: 600px;
+    max-width: 900px;
     margin: auto auto auto auto;
 }
 
@@ -863,7 +918,7 @@ h4 {
         max-width: 100%
     }
 }
-
+/*
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
@@ -875,7 +930,7 @@ h4 {
         background-attachment: scroll;
     }
 }
-
+*/
 @media (max-width: 991px) {
     .container {
         width: 100%;
@@ -1051,10 +1106,20 @@ h4 {
         padding-left: 0;
         padding-right: 0;
     }
+    .col-sm-12 img{
+        width:100%;
+        max-width:320px;
+    }
+    .col-sm-12 .logo{
+        width:100px;
+    }
 }
 
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
+    }
+    .navbar-header{
+        width:100%;
     }
 }
