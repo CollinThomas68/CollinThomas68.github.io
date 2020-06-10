@@ -282,7 +282,6 @@ a[data-lightbox]:hover::before {
     z-index: 1;
     position: absolute;
     top: 50%;
-    left:50%
     transform: translate(135px,-25px);
     -webkit-transform: translate(135px,-25px);
 }
