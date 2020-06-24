@@ -1,0 +1,95 @@
+
+/* Les variables*/
+body {
+  background: #f3e9f1!important;
+  width:100%;
+}
+
+header {
+  height: 300px;
+
+  color: #261624;
+  display: flex!important;
+  flex-direction: column!important;
+  justify-content: center!important;
+  align-items: center!important;
+  top: 0px;
+  width: 100%;
+}
+
+.logo {
+  width: 500px;
+}
+
+img {
+  width:300px;
+}
+.col-sm-6{
+  border:1px solid black;
+
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
+footer {
+
+  color: #261624;
+
+  height: 60px;
+  float: bottom;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer a {
+  text-decoration: none;
+  color: #261624;
+
+}
+
+
+
+@media all and (max-width: 1550px) {
+  .box {
+    width: 275px;
+  }
+
+  .bientot {
+    height: 250px;
+  }
+
+  .produit {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+@media all and (max-width: 1210px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+
+}
+@media all and (max-width: 1000px) {
+  .box {
+
+}
+@media all and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+.img{
+  width:250px;
+}
+}
+
+/*# sourceMappingURL=ohmyfood.css.map */
