@@ -20,7 +20,7 @@ var id = $_GET('id');
 
 
 ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
-    // Transforme la réponse en un tableau d'articles
+    // Récupère le contenu en fonction de l'id de la page
     var teddy = JSON.parse(reponse);
     console.log(teddy);
 console.log(teddy.name);
@@ -54,7 +54,8 @@ console.log(teddy.name);
         conteneurElt.appendChild(orderElt);
 
         buttonElt.addEventListener('click',function(){
-            products.push(teddy._id);
+            localStorage.setItem("id",teddy._id);
+            
         });
     }
 
