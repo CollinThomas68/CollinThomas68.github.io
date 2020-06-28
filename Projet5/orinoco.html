@@ -14,6 +14,32 @@
 			<header>
 				<h1><a href="orinoco.html"><img src="images/logo.png" alt="Logo Orinoco - plateforme de vente spécialisée" class="logo"></a></h1>		
 			</header>
+			<nav class="dropdown">
+				<p>Test</p>
+				<div id="cart">
+					<ul class="topnav">
+
+						<li class="search-n-cart">
+							<div class="dropdown">
+								<div id="cart" class="cart">
+									<p><span class="glyphicon glyphicon-shopping-cart"></span> <span id="in-cart-items-num">0</span> <span class="caret"></span></p>
+								</div>
+		
+								<ul id="cart-dropdown" class="cart-dropdown dropdown-menu pull-right">
+									<li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+									<li class="divider hidden"></li>
+									<li class="go-to-cart hidden"><form method="get" action="https://www.alphapole.com/panier/"><button class="btn btn-primary center-block">Voir le panier</button></form></li>
+								</ul>
+							</div>
+						</li>
+						</ul>
+				</div>
+			
+				<ul id="cart-dropdown" hidden>
+					<li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+					<li class="go-to-cart hidden"><a href="panier.html">Voir le panier</a></li>
+				</ul>
+			</nav>
 			<section class="container">
 				<div class="row" id="teddies"></div>
 			</section>	
@@ -23,13 +49,14 @@
 			</footer>
 
 
-			<script src="js/ajaxGet.js"></script>
-			<script src="js/test.js"></script>
-			<script src="js/panier.js"></script>	
+
+
 
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	</body>
+<script src="js/fonctions.js"></script>
+<script src="js/accueil.js"></script>
+</body>
 </html>

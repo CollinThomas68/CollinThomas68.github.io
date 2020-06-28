@@ -20,7 +20,9 @@ header {
 .logo {
   width: 500px;
 }
-
+.dropdown:hover > #cart-dropdown{
+  display: block;
+}
 img {
   width:300px;
 }
@@ -57,28 +59,13 @@ footer a {
 
 
 @media all and (max-width: 1550px) {
-  .box {
-    width: 275px;
-  }
-
-  .bientot {
-    height: 250px;
-  }
-
-  .produit {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
 }
+
 @media all and (max-width: 1210px) {
-  .container {
-    width: 80%;
-    margin: auto;
-  }
+
 
 }
 @media all and (max-width: 1000px) {
-  .box {
 
 }
 @media all and (max-width: 768px) {
