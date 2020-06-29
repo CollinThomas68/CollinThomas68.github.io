@@ -4,6 +4,33 @@ if (localStorage.getItem("panier") === null) {
     localStorage.setItem("messagePanier", "vide");
 }
 
+/*FONCTION CALCUL DU NOMBRE D'ARTICLES TOTAL DANS LE PANIER*/
+function functionCalculArticlesDuPanier (panier) {
+    var paniers = JSON.parse(localStorage.getItem("panier")); //Recupere le panier en local 
+    var quantite = 0;
+    for (let x in paniers) {
+        quantite += parseInt(paniers[x].quantite);
+    }
+
+    return quantite;
+}
+/*FIN*/
+
+/*FONCTION CALCUL PRIX TOTAL DU PANIER*/
+function functionCalculPrixTotalDuPanier (panier) {
+    var paniers = JSON.parse(localStorage.getItem("panier")); //Recupere le panier en local 
+    var tableauDeComptageDesPrix = [];
+    for (let x in paniers) {
+        var lignePanier = paniers[x];
+        tableauDeComptageDesPrix.push(lignePanier.prixAjour);
+    }
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const prixTotalDuPanier = tableauDeComptageDesPrix.reduce(reducer);
+
+    return prixTotalDuPanier;
+}
+/*FIN*/
+
 // Exécute un appel AJAX GET
 // Prend en paramètres l'URL cible et la fonction callback appelée en cas de succès/*
 function ajaxGet(url, callback) {
@@ -73,7 +100,7 @@ function fonctionAjoutProduit (produit) {
 
         var produitTrouve = false;
         for (let x in data) {
-            if (data[x].reference == Id) {
+            if (data[x].reference == Id && data[x].couleur==couleur) {
 
                 produitTrouve = true;
 
@@ -158,7 +185,7 @@ var fonctionSubmitContact = function () {
     xhttp.open("POST", "http://localhost:3000/api/teddies/order");
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify(commandeToSend));
-
+    console.log(commandeToSend);
     return false;
 }
 

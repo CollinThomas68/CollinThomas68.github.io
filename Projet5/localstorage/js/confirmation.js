@@ -1,5 +1,7 @@
 /*CONFIRMATION ET RETOUR CATALOGUE*/
 if (localStorage.confirmCommande !== "KO") {
+    console.log(localStorage.panier);
+
     document.getElementById("confirmation").innerHTML =
         '<div class="messageConfirmationCommande">'+
             '<p>Confirmation de votre commande n° ' + localStorage.confirmCommande + '</p>'+
