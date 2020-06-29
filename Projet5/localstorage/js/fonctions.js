@@ -180,12 +180,13 @@ var fonctionSubmitContact = function () {
             localStorage.panier = "vide";
             localStorage.setItem("confirmCommande", response.orderId);
             window.location.href = "remerciement.html"; // Vers la page de confirmation
+        
         }
     }; // fin de la fonction
+    console.log(commandeToSend);
     xhttp.open("POST", "http://localhost:3000/api/teddies/order");
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify(commandeToSend));
-    console.log(commandeToSend);
     return false;
 }
 
