@@ -69,7 +69,7 @@ function fonctionAjoutProduit (produit) {
         window.location.href = adresseHtml; //Retour à la page du produit
     } else { //Mettre dans panier
         var data = JSON.parse(localStorage.getItem("panier"));
-        console.log(data.quantite);
+
 
         var produitTrouve = false;
         for (let x in data) {
@@ -97,6 +97,9 @@ function fonctionAjoutProduit (produit) {
     return false; //fin du else panier non vide
 }
 
+var fonctionQuantitePlus =function(){
+    
+}
 
 var fonctionSubmitContact = function () {
     const prenom = document.getElementById('prenom').value; //recupere prenom

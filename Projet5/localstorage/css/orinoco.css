@@ -56,7 +56,10 @@ footer a {
 
 }
 
-
+.col-sm-12{
+  border:2px solid black;
+  text-align:center;
+}
 
 @media all and (max-width: 1550px) {
 }

@@ -23,25 +23,19 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
     // Récupère le contenu en fonction de l'id de la page
     var teddy = JSON.parse(reponse);
     var teddyCouleurs= teddy.colors;
-    /*console.log(teddy);
-    console.log(teddy.name);
-    console.log('Attention début du test');
 
-    console.log('Attention fin du test');
-    console.log(teddyCouleurs);
-    console.log(nbCouleurs);*/
 
     var choixCouleurs="";
     for (let x in teddyCouleurs) {
         choixCouleurs += '<option value="' + teddyCouleurs[x] + '">' + teddyCouleurs[x] + '</option>';
     }
 
-
+    /*
     var qteTeddy="";
     for (q=1;q<10;q++){
         qteTeddy+= '<option value="' + q + '">' + q + '</option>';
     }
-
+    */
 
 
 
@@ -58,11 +52,11 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
                                         '<p>'+teddy.price / 100+'€</p>'+
                                         '<div>'+
                                             '<form onsubmit="return fonctionAjoutProduit()" id="formulaireProduit">'+
-                                                '<label>Quantité : </label><select name="quantite" id="quantite">'+ qteTeddy+'</select>'+
                                                 '<label>Couleur : </label><select name="couleur" id="couleur">'+choixCouleurs+'</select>'+
                                                 '<input type="hidden" name="id" id="id" value="'+teddy._id+'">'+
                                                 '<input type="hidden" name="adresseHtml" id="adresseHtml" value="produit.html?id=' + teddy._id+'">'+
                                                 '<input type="hidden" name="name" id="name" value="'+teddy.name+'">'+
+                                                '<input type="hidden" name="quantite" id="quantite"value="1">'+
                                                 '<input type="hidden" name="description" id="description" value="'+teddy.description+'">'+
                                                 '<input type="hidden" name="prix" id="prix" value="'+teddy.price+'">'+
                                                 '<input type="hidden" name="urlImage" id="urlImage" value="'+teddy.imageUrl+'">'+
