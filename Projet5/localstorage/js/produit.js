@@ -30,12 +30,12 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
         choixCouleurs += '<option value="' + teddyCouleurs[x] + '">' + teddyCouleurs[x] + '</option>';
     }
 
-    /*
+    
     var qteTeddy="";
     for (q=1;q<10;q++){
         qteTeddy+= '<option value="' + q + '">' + q + '</option>';
     }
-    */
+    
 
 
 
@@ -52,6 +52,7 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
                                         '<p>'+teddy.price / 100+'€</p>'+
                                         '<div>'+
                                             '<form onsubmit="return fonctionAjoutProduit()" id="formulaireProduit">'+
+                                                '<label>Quantité : </label><select name="quantite" id="quantite">'+ qteTeddy + '</select>'+
                                                 '<label>Couleur : </label><select name="couleur" id="couleur">'+choixCouleurs+'</select>'+
                                                 '<input type="hidden" name="id" id="id" value="'+teddy._id+'">'+
                                                 '<input type="hidden" name="adresseHtml" id="adresseHtml" value="produit.html?id=' + teddy._id+'">'+

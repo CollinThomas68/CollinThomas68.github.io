@@ -105,7 +105,25 @@ function fonctionAjoutProduit (produit) {
                 produitTrouve = true;
 
                 // Augmente la quantité et le prix
-                data[x].quantite++;
+                console.log('data x quantite');
+                console.log(data[x].quantite);
+                console.log('quantite');               
+                console.log(quantite);
+
+                let qteAjoutee=Number(quantite);
+                console.log('qteAjoutee');
+                console.log(qteAjoutee);
+
+                let qtePanier= Number(data[x].quantite);
+                console.log('qtePanier');                
+                console.log(qtePanier);
+                
+                let qteTotale= qteAjoutee + qtePanier;
+                console.log('qteTotale');                
+                console.log(qteTotale);
+                
+                data[x].quantite=qteTotale;
+                console.log(data[x].quantite);               
                 data[x].prixAjour = data[x].quantite * data[x].prixUnitaire;
             }
         }
@@ -117,9 +135,9 @@ function fonctionAjoutProduit (produit) {
 
         // Sauvegarde du panier mis à jour
         localStorage.messagePanier = "Produit ajouté";
-        localStorage.setItem("panier", JSON.stringify(data));
+        localStorage.setItem("panier", JSON.stringify(data));/*
         window.location.href = adresseHtml; // on revient à la page du produit    
-
+*/
     } 
     return false; //fin du else panier non vide
 }
