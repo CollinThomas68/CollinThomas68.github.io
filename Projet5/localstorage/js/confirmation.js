@@ -4,14 +4,14 @@ if (localStorage.confirmCommande !== "KO") {
 
     document.getElementById("confirmation").innerHTML =
         '<div class="messageConfirmationCommande">'+
-            '<p>Confirmation de votre commande n° ' + localStorage.confirmCommande + '</p>'+
-            '<p>A bientôt</p>'+
+            '<p>Votre commande n° ' + localStorage.confirmCommande + ' a bien été prise en compte</p>'+
+            '<p>Merci encore pour votre commande</p>'+
             '<p><a href="orinoco.html">Retour à l\'accueil</a></p>'+
         '</div>';
 } else {
     document.getElementById("confirmation").innerHTML =
         '<div class="messageConfirmationCommande">'+
-            '<p>Désolé mais nous rencontrons un problème. Veuillez réssayer dans quelques instants</p>'+
+            '<p>Un problème technique vient de survenir, merci de réitérer votre commande dans quelques instants</p>'+
             '<p><a href="orinoco.html">Retour à l\'accueil</a></p>'+
         '</div>';
 }

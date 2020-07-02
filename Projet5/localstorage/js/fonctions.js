@@ -4,31 +4,7 @@ if (localStorage.getItem("panier") === null) {
     localStorage.setItem("messagePanier", "vide");
 }
 
-/*FONCTION CALCUL DU NOMBRE D'ARTICLES TOTAL DANS LE PANIER*/
-function functionCalculArticlesDuPanier (panier) {
-    var paniers = JSON.parse(localStorage.getItem("panier")); //Recupere le panier en local 
-    var quantite = 0;
-    for (let x in paniers) {
-        quantite += parseInt(paniers[x].quantite);
-    }
 
-    return quantite;
-}
-/*FIN*/
-
-/*FONCTION CALCUL PRIX TOTAL DU PANIER*/
-function functionCalculPrixTotalDuPanier (panier) {
-    var paniers = JSON.parse(localStorage.getItem("panier")); //Recupere le panier en local 
-    var tableauDeComptageDesPrix = [];
-    for (let x in paniers) {
-        var lignePanier = paniers[x];
-        tableauDeComptageDesPrix.push(lignePanier.prixAjour);
-    }
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    const prixTotalDuPanier = tableauDeComptageDesPrix.reduce(reducer);
-
-    return prixTotalDuPanier;
-}
 /*FIN*/
 
 // Exécute un appel AJAX GET
@@ -208,5 +184,3 @@ var fonctionSubmitContact = function () {
     return false;
 }
 
-/*FIN*/
-/*FIN GESTION DU PANIER*/

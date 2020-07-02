@@ -34,18 +34,21 @@
 
             // creationligne produit
             let ligne =
-                '<article class="ContenairePanier">'+
-                    '<div class="contenaireLignePanier">'+
-                        '<div class="element-lignePanier"><img src="' + ligneProduitLocal.urlImage + '" title="' + ligneProduitLocal.reference + '"></div>'+
-                        '<div class="element-lignePanier">'+
-                            '<div class="element-optionPanier">' + ligneProduitLocal.nom + '</div>'+
-                            '<div class="element-optionPanier"><b>Option: </b>' + ligneProduitLocal.couleur + '</div>'+
+                '<article class="container">'+
+                    '<div class="row">'+
+                        '<div class="col-sm-4"><img src="' + ligneProduitLocal.urlImage + '" title="' + ligneProduitLocal.reference + '"></div>'+
+                        '<div class="col-sm-4">'+
+                            '<div>' + ligneProduitLocal.nom + '</div>'+
+                            '<div><b>Couleur: </b>' + ligneProduitLocal.couleur + '</div>'+
+ 
+                            '<div>' + ligneProduitLocal.description + '</div>'+
                         '</div>'+
-                        '<div class="element-lignePanier">' + ligneProduitLocal.description + '</div>'+
-                        '<div class="element-lignePanier"><b>Prix U:</b><br/>' + ligneProduitLocal.prixUnitaire / 100 + '€</div>'+
-                        '<div class="element-lignePanier"><b>Qté:</b><br/>' + ligneProduitLocal.quantite + '</div>'+
-                        '<div class="element-lignePanier"><b>Montant dû</b><br/>' + ligneProduitLocal.prixAjour / 100 + '€</div>'+
-                        '<div class="element-lignePanier">'+
+                        '<div class="col-sm-4">'+
+                            '<div><b>Prix U:</b><br/>' + ligneProduitLocal.prixUnitaire / 100 + '€</div>'+
+                            '<div><b>Qté:</b><br/>' + ligneProduitLocal.quantite + '</div>'+
+                            '<div><b>Montant dû</b><br/>' + ligneProduitLocal.prixAjour / 100 + '€</div>'+
+                        '</div>'+
+                        '<div>'+
                         '<div class="sousElement-lignePanier"><button class="boutonPanierQuantite" onclick="fonctionQuantitePlus(\'' + ligneProduitLocal.reference + '\')">+1</button></div>' + signeMoinsPanier + '</div>'+
                     '</div>'+
                 '</article>';
