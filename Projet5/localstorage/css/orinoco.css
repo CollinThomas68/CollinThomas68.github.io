@@ -1,11 +1,14 @@
 .container{
   border :2px solid black;
-  margin-top:20px;
+  margin-top :20px;
+  margin-left:0;
+  margin-right:0;
 }
 
 body {
   background: #f3e9f1!important;
   width:100%;
+  margin:0;
 }
 
 header {
@@ -29,7 +32,7 @@ header {
 img {
   width:300px;
 }
-.col-sm-6{
+.col-sm-4{
   border:1px solid black;
 
 }
@@ -38,7 +41,12 @@ img {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
+.row{
+  margin:0px!important;
+}
+.border{
+  border:2px solid black;
+}
 
 footer {
 

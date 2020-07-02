@@ -17,39 +17,46 @@
 */
 
     } else { // panier NON vide
-        var produitsLocal = JSON.parse(localStorage.getItem("panier")); // Récupération du  panier
-        console.log(produitsLocal);
+        var contenuPanier = JSON.parse(localStorage.getItem("panier")); // Récupération du  panier
+        console.log(contenuPanier);
 
-        for (let x in produitsLocal) { //Inspection du panier
-            var ligneProduitLocal = produitsLocal[x]; //Recherche  ligneProduitLocal par nom
-            console.log(ligneProduitLocal);
+        for (let x in contenuPanier) { //Inspection du panier
+            var ligneProduitPanier = contenuPanier[x]; //Recherche  ligneProduitLocal par nom
+            console.log(ligneProduitPanier);
             // variation quantite - ou suppression a l'affichage
-            var signeMoinsPanier = "";
-            var plusOuMoins = String("moins");
-            if (ligneProduitLocal.quantite > 1) {
-                signeMoinsPanier = '<div class="sousElement-lignePanier"><button class="boutonPanierQuantite" onclick="fonctionQuantiteMoins(\'' + ligneProduitLocal.reference + '\')">-1</button></div>';
+            var boutonMoins = "";
+
+            if (ligneProduitPanier.quantite > 1) {
+                boutonMoins = '<button class="boutonMoins" onclick="diminutionQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')">-1</button>';
             } else {
-                signeMoinsPanier = '<div class="sousElement-lignePanier"><button class="boutonPanierQuantite" onclick="fonctionDelete(' + x + ')">Suppression</i></button></div>';
+                boutonMoins = '<button class="boutonMoins" onclick="suppressionArticle(' + x + ')">Suppression</i></button>';
             }
 
             // creationligne produit
             let ligne =
                 '<article class="container">'+
                     '<div class="row">'+
-                        '<div class="col-sm-4"><img src="' + ligneProduitLocal.image + '" title="' + ligneProduitLocal.id + '"></div>'+
-                        '<div class="col-sm-4">'+
-                            '<div>' + ligneProduitLocal.nom + '</div>'+
-                            '<div><b>Couleur: </b>' + ligneProduitLocal.couleur + '</div>'+
- 
-                            '<div>' + ligneProduitLocal.description + '</div>'+
-                        '</div>'+
-                        '<div class="col-sm-4">'+
-                            '<div><b>Prix U:</b><br/>' + ligneProduitLocal.prix / 100 + '€</div>'+
-                            '<div><b>Qté:</b><br/>' + ligneProduitLocal.quantite + '</div>'+
-                            '<div><b>Montant dû</b><br/>' + ligneProduitLocal.prixTtl / 100 + '€</div>'+
-                        '</div>'+
-                        '<div>'+
-                        '<div class="sousElement-lignePanier"><button class="boutonPanierQuantite" onclick="fonctionQuantitePlus(\'' + ligneProduitLocal.reference + '\')">+1</button></div>' + signeMoinsPanier + '</div>'+
+                    '<div class="col-sm-11">'+
+                        '<a href="'+ligneProduitPanier.adresseHtml +'">'+
+                            '<div class="row border">'+
+                                '<div class="col-sm-4 border"><img src="' + ligneProduitPanier.image + '" title="' + ligneProduitPanier.id + '"></div>'+
+                                '<div class="col-sm-4">'+
+                                    '<div>' + ligneProduitPanier.nom + '</div>'+
+                                    '<div><b>Couleur: </b><span id="couleurPanier">' + ligneProduitPanier.couleur + '</span></div>'+
+        
+                                    '<div>' + ligneProduitPanier.description + '</div>'+
+                                '</div>'+
+                                '<div class="col-sm-4">'+
+                                    '<div><b>Prix U:</b><br/>' + ligneProduitPanier.prix / 100 + '€</div>'+
+                                    '<div><b>Qté:</b><br/>' + ligneProduitPanier.quantite + '</div>'+
+                                    '<div><b>Montant dû</b><br/>' + ligneProduitPanier.prixTtl / 100 + '€</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</a>'+
+                    '</div>'+
+                    '<div class="col-sm-1">'+
+                        '<button class="boutonPlus" onclick="ajoutQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')">+1</button>' + boutonMoins + 
+                    '</div>'+
                     '</div>'+
                 '</article>';
 
@@ -57,7 +64,7 @@
 
             //affichage du panier sur le html
             document.getElementById("resultatsPanier").innerHTML += ligne;
-        } // fin for produilocal
+        } 
         let partieContact =
         '<article class="elementPanier">'+
                     '<form name="formContact" id="idFormContact" onsubmit="return fonctionSubmitContact()">'+
