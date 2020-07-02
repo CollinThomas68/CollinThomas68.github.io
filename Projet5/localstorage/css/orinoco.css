@@ -45,13 +45,11 @@ footer {
   color: #261624;
 
   height: 60px;
-  float: bottom;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 footer a {
   text-decoration: none;

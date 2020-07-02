@@ -4,6 +4,13 @@ if (localStorage.getItem("panier") === null) {
     localStorage.setItem("messagePanier", "vide");
 }
 
+/*Fonction Vider la Panier*/
+var ViderPanier = function ViderPanier(){
+    localStorage.getItem("panier");
+    localStorage.setItem("panier","vide");
+    localStorage.setItem("message", "vide");
+}
+
 
 /*FIN*/
 
@@ -33,6 +40,114 @@ function ajaxGet(url, callback) {
 
 
 
+
+
+function ajoutProduitPanier(produit){
+
+const id= document.getElementById('id').value;
+const nom=document.getElementById('nom').value;
+const quantite=document.getElementById('quantite').value;
+const couleur=document.getElementById('couleur').value;
+const adresseHmtl=document.getElementById('adresseHtml').value;
+const description = document.getElementById('description').value;
+const prix = document.getElementById('prix').value;
+const image = document.getElementById('image').value;
+var prixTtl= prix * quantite;
+
+    class produitPanier{
+        constructor(id,nom,quantite,couleur,adresseHtml,description,prix,image,prixTtl){
+            this.id=id;
+            this.nom=nom;
+            this.quantite=quantite;
+            this.couleur=couleur;
+            this.adresseHtml=adresseHtml;
+            this.description=description;
+            this.prix=prix;
+            this.image=image;
+            this.prixTtl=prixTtl;
+        }
+    }
+        if( localStorage.getItem("panier")==="vide"){
+            const produit = new produitPanier(id, nom, quantite, couleur,adresseHtml,description,prix,image,prixTtl);
+            var Panier=[];
+            Panier.push(produit);
+            localStorage.setItem("panier",JSON.stringify(Panier));/*
+            windows.location.href=adresseHtml;*/
+        } else{
+            /*2 hypothèes : -> le produit existe déjà dans le panier, on ne changera donc que la quantité de celui-ci et le prix rapporté à la quantité.
+                            -> le produit est absent des produits déjà présents, il faut rajouter une ligne.
+            */
+        var contenuPanier=JSON.parse(localStorage.getItem("panier"));
+        var produitExiste=false;
+        for (let x in contenuPanier){
+
+            if(contenuPanier[x].id==id && contenuPanier[x].couleur==couleur){//1ere hypothèse
+                produitExiste=true;
+                let qtePanier=Number(contenuPanier[x].quantite);
+                let qteAjoutee=Number(quantite);
+                contenuPanier[x].quantite=qtePanier + qteAjoutee;
+                contenuPanier[x].prixTtl=contenuPanier[x].quantite * contenuPanier[x].prix;
+            }
+
+        }
+        if(!produitExiste){
+            const produit = new produitPanier(id, nom,quantite, couleur,adresseHtml,description,prix,image,prixTtl);
+            contenuPanier.push(produit);
+        }
+        localStorage.setItem("panier",JSON.stringify(contenuPanier));/*
+        windows.location.href=adresseHtml;*/
+    }
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 function fonctionAjoutProduit (produit) {
 
     // recupere les donnees du formulaire, déclare les constantes 
@@ -40,7 +155,7 @@ function fonctionAjoutProduit (produit) {
     const couleur = document.getElementById('couleur').value; // recupere l'option de couleurs
     const quantite = document.getElementById('quantite').value; // recupere quantité produit
     const adresseHtml = document.getElementById('adresseHtml').value; // recupere url
-    const name = document.getElementById('name').value; // recupere nom du produit
+    const nom = document.getElementById('nom').value; // recupere nom du produit
     const prixUnitaire = document.getElementById('prix').value; // recupere prix du produit
     const urlImage = document.getElementById('urlImage').value; // recupere url de l'image du produit
     const description = document.getElementById('description').value; // recupere  description du produit
@@ -64,7 +179,7 @@ function fonctionAjoutProduit (produit) {
 
     // Tri du panier
     if (localStorage.getItem("panier") === "vide") { //si panier vide d'origine car initialisation à null on ecrit directement dans le panier
-        const ligne = new ligneDuPanier(Id, name, quantite, couleur, prixUnitaire, prixAjour, urlImage, description);
+        const ligne = new ligneDuPanier(Id, nom, quantite, couleur, prixUnitaire, prixAjour, urlImage, description);
         var Panier = [];
         Panier.push(ligne); //mis en dernier dans un tableau pour panier
         localStorage.messagePanier = "Produit ajouté"; //Envoi d'un message à l'utilisateur
@@ -105,19 +220,19 @@ function fonctionAjoutProduit (produit) {
         }
 
         if (!produitTrouve) {
-            const ligne = new ligneDuPanier(Id, name, quantite, couleur, prixUnitaire, prixAjour, urlImage, description);
+            const ligne = new ligneDuPanier(Id, nom, quantite, couleur, prixUnitaire, prixAjour, urlImage, description);
             data.push(ligne);
         }
 
         // Sauvegarde du panier mis à jour
         localStorage.messagePanier = "Produit ajouté";
-        localStorage.setItem("panier", JSON.stringify(data));/*
+        localStorage.setItem("panier", JSON.stringify(data));
         window.location.href = adresseHtml; // on revient à la page du produit    
-*/
+
     } 
     return false; //fin du else panier non vide
 }
-
+*/
 var fonctionQuantitePlus =function(){
     
 }

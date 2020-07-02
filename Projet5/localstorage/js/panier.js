@@ -36,7 +36,7 @@
             let ligne =
                 '<article class="container">'+
                     '<div class="row">'+
-                        '<div class="col-sm-4"><img src="' + ligneProduitLocal.urlImage + '" title="' + ligneProduitLocal.reference + '"></div>'+
+                        '<div class="col-sm-4"><img src="' + ligneProduitLocal.image + '" title="' + ligneProduitLocal.id + '"></div>'+
                         '<div class="col-sm-4">'+
                             '<div>' + ligneProduitLocal.nom + '</div>'+
                             '<div><b>Couleur: </b>' + ligneProduitLocal.couleur + '</div>'+
@@ -44,9 +44,9 @@
                             '<div>' + ligneProduitLocal.description + '</div>'+
                         '</div>'+
                         '<div class="col-sm-4">'+
-                            '<div><b>Prix U:</b><br/>' + ligneProduitLocal.prixUnitaire / 100 + '€</div>'+
+                            '<div><b>Prix U:</b><br/>' + ligneProduitLocal.prix / 100 + '€</div>'+
                             '<div><b>Qté:</b><br/>' + ligneProduitLocal.quantite + '</div>'+
-                            '<div><b>Montant dû</b><br/>' + ligneProduitLocal.prixAjour / 100 + '€</div>'+
+                            '<div><b>Montant dû</b><br/>' + ligneProduitLocal.prixTtl / 100 + '€</div>'+
                         '</div>'+
                         '<div>'+
                         '<div class="sousElement-lignePanier"><button class="boutonPanierQuantite" onclick="fonctionQuantitePlus(\'' + ligneProduitLocal.reference + '\')">+1</button></div>' + signeMoinsPanier + '</div>'+

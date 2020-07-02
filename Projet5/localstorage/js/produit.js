@@ -51,16 +51,16 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
                                         '<p>'+teddy.description+'</p>'+
                                         '<p>'+teddy.price / 100+'€</p>'+
                                         '<div>'+
-                                            '<form onsubmit="return fonctionAjoutProduit()" id="formulaireProduit">'+
+                                            '<form onsubmit="return ajoutProduitPanier()" id="formulaireProduit">'+
                                                 '<label>Quantité : </label><select name="quantite" id="quantite">'+ qteTeddy + '</select>'+
                                                 '<label>Couleur : </label><select name="couleur" id="couleur">'+choixCouleurs+'</select>'+
                                                 '<input type="hidden" name="id" id="id" value="'+teddy._id+'">'+
                                                 '<input type="hidden" name="adresseHtml" id="adresseHtml" value="produit.html?id=' + teddy._id+'">'+
-                                                '<input type="hidden" name="name" id="name" value="'+teddy.name+'">'+
+                                                '<input type="hidden" name="nom" id="nom" value="'+teddy.name+'">'+
                                                 '<input type="hidden" name="quantite" id="quantite"value="1">'+
                                                 '<input type="hidden" name="description" id="description" value="'+teddy.description+'">'+
                                                 '<input type="hidden" name="prix" id="prix" value="'+teddy.price+'">'+
-                                                '<input type="hidden" name="urlImage" id="urlImage" value="'+teddy.imageUrl+'">'+
+                                                '<input type="hidden" name="image" id="image" value="'+teddy.imageUrl+'">'+
                                                 '<input type="submit" value="Ajout produit au panier" class="btnAjoutProduit"/>'+
                                             '</form>'+
                                         '</div>'+
