@@ -8,7 +8,7 @@
 body {
   background: #f3e9f1!important;
   width:100%;
-  margin:0;
+  margin:0!important;
 }
 
 header {
@@ -32,10 +32,7 @@ header {
 img {
   width:300px;
 }
-.col-sm-4{
-  border:1px solid black;
 
-}
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -44,8 +41,8 @@ img {
 .row{
   margin:0px!important;
 }
-.border{
-  border:2px solid black;
+.borderTest{
+  border:2px solid black!important;
 }
 
 footer {
@@ -68,6 +65,14 @@ footer a {
 .col-sm-12{
   border:2px solid black;
   text-align:center;
+}
+.col-sm-1{
+  padding:0px!important;
+}
+.boutonMoins, .boutonPlus{
+  width:100%;
+  border:2px solid black;
+  height:50%;
 }
 
 @media all and (max-width: 1550px) {

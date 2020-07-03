@@ -20,9 +20,34 @@
         var contenuPanier = JSON.parse(localStorage.getItem("panier")); // Récupération du  panier
         console.log(contenuPanier);
 
+        var tableauQtePanier=[]; //Déclaration du tableau de calcul des quantités
+        var tableauPrixPanier=[];//Déclaration du tableau de calcul des prix
         for (let x in contenuPanier) { //Inspection du panier
-            var ligneProduitPanier = contenuPanier[x]; //Recherche  ligneProduitLocal par nom
+            var ligneProduitPanier = contenuPanier[x]; //Recherche  ligneProduitLocal par id
+      
+            //Calcul des quantités totales
+            var ligneQtePanier=contenuPanier[x].quantite;
             console.log(ligneProduitPanier);
+            console.log('Test Qte');
+            console.log(ligneQtePanier);
+            tableauQtePanier.push(Number(contenuPanier[x].quantite));
+            console.log('affichage tableau qte panier'); 
+            console.log(tableauQtePanier);
+            calculQtePanier(tableauQtePanier);
+            var quantiteTotale=localStorage.messageQtePanier;
+            console.log('Test affichage final');
+            console.log(quantiteTotale);
+
+            //Calcul du prix Total
+            var lignePrixPanier=contenuPanier[x].prixTtl;
+            tableauPrixPanier.push(Number(contenuPanier[x].prixTtl));
+            calculPrixPanier(tableauPrixPanier);
+            var prixTotal=localStorage.messagePrixPanier;
+            console.log('Test affichage final');
+            console.log(prixTotal);
+
+            //Calcul du prix total
+
             // variation quantite - ou suppression a l'affichage
             var boutonMoins = "";
 
@@ -34,11 +59,10 @@
 
             // creationligne produit
             let ligne =
-                '<article class="container">'+
-                    '<div class="row">'+
+                '<article class="row borderTest">'+
                     '<div class="col-sm-11">'+
                         '<a href="'+ligneProduitPanier.adresseHtml +'">'+
-                            '<div class="row border">'+
+                            '<div class="row">'+
                                 '<div class="col-sm-4 border"><img src="' + ligneProduitPanier.image + '" title="' + ligneProduitPanier.id + '"></div>'+
                                 '<div class="col-sm-4">'+
                                     '<div>' + ligneProduitPanier.nom + '</div>'+
@@ -55,8 +79,8 @@
                         '</a>'+
                     '</div>'+
                     '<div class="col-sm-1">'+
-                        '<button class="boutonPlus" onclick="ajoutQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')">+1</button>' + boutonMoins + 
-                    '</div>'+
+                        '<button class="boutonPlus" onclick="ajoutQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')">+1</button>' + 
+                        boutonMoins + 
                     '</div>'+
                 '</article>';
 
@@ -64,6 +88,19 @@
 
             //affichage du panier sur le html
             document.getElementById("resultatsPanier").innerHTML += ligne;
+
+            let qteTTL="";
+            if(quantiteTotale>1){
+                qteTTL='<span>Votre panier contient '+quantiteTotale + ' articles</span>';
+            }else{
+                qteTTL='<span>Votre panier contient '+ quantiteTotale + ' article</span>';                
+            }
+                        
+            document.getElementById("qteTotale").innerHTML = qteTTL;
+
+            let prixTTL= '<span>Le montant total de votre commande s\'élève à '+ prixTotal/100 + '€</span>';
+            document.getElementById("prixTotal").innerHTML = prixTTL;
+
         } 
         let partieContact =
         '<article class="elementPanier">'+

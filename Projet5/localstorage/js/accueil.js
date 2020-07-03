@@ -1,4 +1,7 @@
 var teddiesElt = document.getElementById("teddies");
+/*var infoQte=document.getElementById("infoPanier");
+infoQte.innerHTML='<span>contient '+ qteTtlPanier +' article(s)</span>';
+*/
 ajaxGet("http://localhost:3000/api/teddies", function (reponse) {
     // Transforme la réponse en un tableau d'articles
     var teddies = JSON.parse(reponse);

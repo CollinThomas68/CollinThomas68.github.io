@@ -2,6 +2,8 @@
 if (localStorage.getItem("panier") === null) {
     localStorage.setItem("panier", "vide");
     localStorage.setItem("messagePanier", "vide");
+    localStorage.setItem("messageQtePanier","vide");
+    localStorage.setItem("messagePrixPanier","vide");
 }
 
 /*Fonction Vider la Panier*/
@@ -11,7 +13,43 @@ var ViderPanier = function ViderPanier(){
     localStorage.setItem("message", "vide");
 }
 
+function calculQtePanier(tableau){
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log('test fonction calcul qte');
+    console.log(tableau.reduce(reducer));
+    localStorage.setItem("messageQtePanier",tableau.reduce(reducer) );
+}
+/*
+//test fonction calcul panier dans Fonctions
+function calcQte(){
+    var contenuPanier = JSON.parse(localStorage.getItem("panier")); // Récupération du  panier
+    var tableauQtePanier=[]; //Déclaration du tableau de calcul des quantités
+    for (let x in contenuPanier) { //Inspection du panier
+        var ligneProduitPanier = contenuPanier[x]; //Recherche  ligneProduitLocal par id
+        
+        //Calcul des quantités totales
+        var ligneQtePanier=contenuPanier[x].quantite;
+        console.log(ligneProduitPanier);
+        console.log('Test Qte');
+        console.log(ligneQtePanier);
+        tableauQtePanier.push(Number(contenuPanier[x].quantite));
+        console.log('affichage tableau qte panier'); 
+        console.log(tableauQtePanier);
+        calculQtePanier(tableauQtePanier);
+        var quantiteTotale=localStorage.messageQtePanier;
+        console.log('Test affichage final');
+        console.log(quantiteTotale);
 
+    }
+}
+*/
+
+function calculPrixPanier(tableau){
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log('test fonction calcul prix');
+    console.log(tableau.reduce(reducer));
+    localStorage.setItem("messagePrixPanier",tableau.reduce(reducer) );
+}
 /*FIN*/
 
 // Exécute un appel AJAX GET
@@ -73,7 +111,7 @@ function ajoutProduitPanier(produit){
             Panier.push(produit);
 
             localStorage.setItem("panier",JSON.stringify(Panier));
-            windows.location.href=adresseHtml;
+            window.location.href=adresseHtml;
         } else{
             /*2 hypothèes : -> le produit existe déjà dans le panier, on ne changera donc que la quantité de celui-ci et le prix rapporté à la quantité.
                             -> le produit est absent des produits déjà présents, il faut rajouter une ligne.
@@ -97,7 +135,7 @@ function ajoutProduitPanier(produit){
             contenuPanier.push(produit);
         }
         localStorage.setItem("panier",JSON.stringify(contenuPanier));
-        windows.location.href=adresseHtml;
+        window.location.href=adresseHtml;
     }
     return false;
 }
