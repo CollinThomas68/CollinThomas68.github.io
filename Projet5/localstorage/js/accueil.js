@@ -14,22 +14,25 @@ ajaxGet("http://localhost:3000/api/teddies", function (reponse) {
     var teddies = JSON.parse(reponse);
     let selectionTeddies= document.getElementById('teddies');
     console.log(teddies.length);
-
+    var tableauTeddies=[];
         for(var i=0;i<teddies.length;i++){
             var teddy=teddies[i];
             let selectionProduits='<article>'+
-                                    '<a href="produit.html?id=' + teddy._id+'">'+
-                                        '<div>'+
-                                            '<img src="'+teddy.imageUrl+'">'+
+                                    '<a href="produit.html?id=' + teddy._id+'" class="row">'+
+                                        '<div class="col-sm-6">'+
+                                            '<img src="'+teddy.imageUrl+'" class="imageListing">'+
                                         '</div>'+
-                                        '<div>'+
+                                        '<div class="col-sm-6">'+
                                             '<h2>'+teddy.name+'</h2>'+
                                             '<p>'+teddy.description+'</p>'+
                                         '</div>'+    
                                     '</a>'+
                                 '</article>';
-
+                                tableauTeddies.push(teddy._id);
+                                localStorage.setItem('tableauTeddy',JSON.stringify(tableauTeddies));
             selectionTeddies.innerHTML+=selectionProduits;
+
+
     }
 
 });

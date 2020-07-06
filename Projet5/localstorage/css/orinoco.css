@@ -1,5 +1,5 @@
 .container{
-  border :2px solid black;
+
   margin-top :20px;
   margin-left:0;
   margin-right:0;
@@ -23,15 +23,23 @@ header {
   width: 100%;
 }
 
+a{
+  text-decoration:none;
+}
 .logo {
   width: 500px;
 }
-.dropdown:hover > #cart-dropdown{
-  display: block;
+article{
+  border: 2px solid black;
+  padding-bottom:25px;
+  padding-top:25px;
+  margin-bottom: 30px;
+  box-shadow: 10px 5px 5px black;
 }
 
 img {
   width:100%;
+  box-shadow: 10px 5px 5px black;
 }
 
 .container {

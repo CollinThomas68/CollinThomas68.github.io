@@ -3,6 +3,7 @@ if (localStorage.getItem("panier") === null) {
     localStorage.setItem("panier", "vide");
     localStorage.setItem("messageQtePanier","vide");
     localStorage.setItem("messagePrixPanier","vide");
+    localStorage.setItem("tableauTeddy","vide");
 }
 
 /*Fonction Vider la Panier*/
@@ -11,6 +12,7 @@ var ViderPanier = function ViderPanier(){
     localStorage.setItem("panier","vide");
     localStorage.setItem("message", "vide");
     localStorage.setItem("messageQtePanier", "vide");
+    localStorage.setItem("messagePrixPanier","vide");
     window.location.href="orinoco.html";
 }
 
@@ -86,19 +88,16 @@ function ajoutProduitPanier(produit){
         if( localStorage.getItem("panier")==="vide"){
             const produit = new produitPanier(id, nom, quantite, couleur,adresseHtml,description,prix,image,prixTtl);
             var Panier=[];
-            var panierQte=[];//test
             Panier.push(produit);
             numberQte=Number(produit.quantite);
-            panierQte.push(numberQte);//test
             localStorage.setItem("panier",JSON.stringify(Panier));
-            localStorage.setItem("panierQte",JSON.stringify(panierQte));//test
             window.location.href="panier.html";
+  
         } else{
             /*2 hypothèes : -> le produit existe déjà dans le panier, on ne changera donc que la quantité de celui-ci et le prix rapporté à la quantité.
                             -> le produit est absent des produits déjà présents, il faut rajouter une ligne.
             */
         var contenuPanier=JSON.parse(localStorage.getItem("panier"));
-        var quantitePanier=JSON.parse(localStorage.getItem("panierQte"));//test
         var produitExiste=false;
         for (let x in contenuPanier){
 
@@ -107,9 +106,7 @@ function ajoutProduitPanier(produit){
                 produitExiste=true;
                 let qtePanier=Number(contenuPanier[x].quantite);
                 let qteAjoutee=Number(quantite);
-                quantitePanier.push(qteAjoutee);
                 contenuPanier[x].quantite=qtePanier + qteAjoutee;
-
                 contenuPanier[x].prixTtl=contenuPanier[x].quantite * contenuPanier[x].prix;
             }
 
@@ -117,12 +114,12 @@ function ajoutProduitPanier(produit){
         if(!produitExiste){
             const produit = new produitPanier(id, nom,quantite, couleur,adresseHtml,description,prix,image,prixTtl);
             contenuPanier.push(produit);
-            let qteAjoutee=Number(produit.quantite);
-            quantitePanier.push(qteAjoutee);
+
         }
         localStorage.setItem("panier",JSON.stringify(contenuPanier));
-        localStorage.setItem("panierQte",JSON.stringify(quantitePanier));
+
         window.location.href="panier.html";
+
     }
     return false;
 }
@@ -189,18 +186,18 @@ var fonctionSubmitContact = function () {
     const mail = document.getElementById('email').value; //recupere email
     const ville = document.getElementById('ville').value; //recupere ville 
     const adresse = document.getElementById('adresse').value; //recupere adresse  
-    const codePostal = document.getElementById('codePostal').value; //recupere codepostal
+
 
     /*format pour l'envoi*/
     class formatToSend {
-        constructor(utilisateur, idSacommander) {
-            this.contact = utilisateur;
-            this.products = idSacommander;
+        constructor(contact, products) {
+            this.contact = contact;
+            this.products = products;
         }
     }
     /*format pour l'utilisateur*/
     class formatUtilisateur {
-        constructor(nom, prenom, adresse, ville, mail) {
+        constructor(prenom, nom, adresse, ville, mail) {
             this.firstName = prenom;
             this.lastName = nom;
             this.address = adresse;
@@ -210,19 +207,27 @@ var fonctionSubmitContact = function () {
     }
 
     /*construction de l'utilisateur*/
-    const utilisateur = new formatUtilisateur(prenom, nom, adresse, ville, mail);
+    const contact = new formatUtilisateur(prenom, nom, adresse, ville, mail);
 
 
     /*construction de l'array avec uniquement les identifiants des produits*/
     var contenuPanier=JSON.parse(localStorage.getItem("panier"));
-    var idSacommander = [];
+    console.log('Affichage contenuPanier')
+    console.log(contenuPanier);
+    var products = [];
     for (var x = 0; x < contenuPanier.length; x++) {
+
         var ligneProduit = contenuPanier[x];
-        idSacommander.push(ligneProduit.id);
+            for (var y =0; y < ligneProduit.quantite;y++){//
+
+
+                products.push(ligneProduit.id);
+            }
+
     }
 
  /*Infos=Ok==> la commande prete a envoyer*/
-    const commandeToSend = new formatToSend(utilisateur, idSacommander)
+    const commandeToSend = new formatToSend(contact, products)
 
     /*ENVOI*/
 

@@ -81,10 +81,57 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
         let produitAffichage = document.getElementById('teddy');
         produitAffichage.innerHTML= produitChoisi;
     }
+
+
 });
+ajaxGet("http://localhost:3000/api/teddies", function (reponse) {
+    // Transforme la réponse en un tableau d'articles
+    var teddies = JSON.parse(reponse);
+    
+    console.log(teddies.length);
+    console.log(teddies);
+    console.log(id);
+        for(var i=0;i<teddies.length;i++){
+            if(id!=teddies[i]._id){
+                let autresProduits='<article class="col-sm-3">'+
+                '<a href="produit.html?id=' + teddies[i]._id+'" class="row">'+
+                    '<div >'+
+                        '<img src="'+teddies[i].imageUrl+'" class="imageListing">'+
+                    '</div>'+
+  
+                '</a>'+
+            '</article>';
+            console
+            let carousel = document.getElementById('lesautres');
+            carousel.innerHTML+= autresProduits;
+            }
 
+    }
 
-        /*
+});
+/*
+var autresTeddies=JSON.parse(localStorage.getItem("tableauTeddy"));
+console.log(autresTeddies);
+
+for(i=0;i<autresTeddies.length;i++){
+    if(id!=autresTeddies[i]){
+        let autresProduits='<article>'+
+        '<a href="produit.html?id=' + teddy._id+'" class="row">'+
+            '<div class="col-sm-6">'+
+                '<img src="'+teddy.imageUrl+'" class="imageListing">'+
+            '</div>'+
+            '<div class="col-sm-6">'+
+                '<h2>'+teddy.name+'</h2>'+
+                '<p>'+teddy.description+'</p>'+
+            '</div>'+    
+        '</a>'+
+    '</article>';
+    let carousel = document.getElementById('lesautres');
+    carousel.innerHTML+= autresProduits;
+
+    }
+}
+        
         // Ajout du titre et du contenu de chaque article
         var conteneurElt = document.createElement("article");
         var lienElt = document.createElement("a");        

@@ -8,10 +8,12 @@
 
         
         document.getElementById("detailPanier").innerHTML = 
-            '<div class="messagePanierVide">'+
+            '<div>'+
                 '<p>Le panier est vide </p>'+
                 '<p><a href="orinoco.html"> Retour à l\'accueil </a></p>'+
             '</div>';
+        document.getElementById("contactClient").innerHTML =
+        '<div>'+'</div>';
 
     } else { // panier NON vide
        /* var quantitePanier=JSON.parse(localStorage.getItem("messageQtePanier"));
@@ -86,21 +88,25 @@
                 '</article>';
 
 
-
             //affichage du panier sur le html
             document.getElementById("detailPanier").innerHTML += ligne;
 
-            let qteTTL="";
+            let recapTTL="";
             if(quantiteTotale>1){
-                qteTTL='<span>Votre panier contient '+quantiteTotale + ' articles</span>';
+                recapTTL=
+                '<article class="row">'+
+                '<div id="qteTotale" class="col-sm-6"><span>Votre panier contient '+quantiteTotale + ' articles</span></div>'+
+                '<div id="prixTotal" class="col-sm-6"><span>Le montant total de votre commande s\'élève à '+ prixTotal/100 + '€</span></div>'+
+                '</article>';
             }else{
-                qteTTL='<span>Votre panier contient '+ quantiteTotale + ' article</span>';                
+                recapTTL=
+                '<article class="row">'+
+                '<div id="qteTotale" class="col-sm-6"><span>Votre panier contient '+quantiteTotale + ' article</span></div>'+
+                '<div id="prixTotal" class="col-sm-6"><span>Le montant total de votre commande s\'élève à '+ prixTotal/100 + '€</span></div>'+
+                '</article>';               
             }
                         
-            document.getElementById("qteTotale").innerHTML = qteTTL;
-
-            let prixTTL= '<span>Le montant total de votre commande s\'élève à '+ prixTotal/100 + '€</span>';
-            document.getElementById("prixTotal").innerHTML = prixTTL;
+            document.getElementById("totauxPaniers").innerHTML = recapTTL;
 
         } 
         let partieContact =

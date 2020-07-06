@@ -1,10 +1,11 @@
 /*CONFIRMATION ET RETOUR CATALOGUE*/
 if (localStorage.confirmCommande !== "KO") {
-    console.log(localStorage.panier);
+
 
     document.getElementById("confirmation").innerHTML =
         '<div class="messageConfirmationCommande">'+
-            '<p>Votre commande n° ' + localStorage.confirmCommande + ' a bien été prise en compte</p>'+
+            '<p>Votre commande n° ' + localStorage.confirmCommande + ' a bien été prise en compte pour un montant total de '+localStorage.messagePrixPanier/100+' €</p>'+
+
             '<p>Merci encore pour votre commande</p>'+
             '<p><a href="orinoco.html">Retour à l\'accueil</a></p>'+
         '</div>';
