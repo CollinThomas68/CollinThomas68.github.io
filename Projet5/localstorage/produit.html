@@ -16,17 +16,24 @@
 		<header>
 			<h1><a href="orinoco.html"><img src="images/logo.png" alt="Logo Orinoco - plateforme de vente spécialisée" class="logo"></a></h1>		
 		</header>
-			<nav>
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="row">
-							<btn class="col-sm-4"><a href="panier.html">Votre panier est localStorage</a></btn>
-							<btn class="col-sm-4" onclick=" ViderPanier()">Vider le Panier</btn>
+		<nav class="borderTest">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-6">
+							<button><a href="panier.html">Votre panier <span id="testqte"></span></a><br/>
+
+							</button>
 						</div>
-	
+						<div class="col-sm-6">
+							<button onclick=" ViderPanier()">Vider le Panier
+							</button>
+						</div> 
 					</div>
+
 				</div>
-			</nav>
+			</div>
+		</nav>
 			<section class="container">
 				<div class="row" id="teddy"></div>
 			</section>	

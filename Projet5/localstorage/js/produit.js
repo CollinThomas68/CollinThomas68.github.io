@@ -18,6 +18,15 @@ var id = $_GET('id');
 
 
 
+//test affichage quantité du panier
+
+if (JSON.parse(localStorage.getItem("panier") === "vide")) { //Panier vide 
+    document.getElementById("testqte").textContent = ' est vide !'
+} else { // panier NON vide
+    var quantitePanier=JSON.parse(localStorage.getItem("messageQtePanier"));
+    var prixPanier=JSON.parse(localStorage.getItem("messagePrixPanier"));
+    document.getElementById("testqte").innerHTML = ' contient '+quantitePanier+' articles<br/> pour un montant total de '+prixPanier/100+' € !';
+}
 
 ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
     // Récupère le contenu en fonction de l'id de la page

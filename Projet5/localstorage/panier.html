@@ -12,34 +12,39 @@
 		<title>Orinoco : La platerfome de vente spécialisée</title>
 		<script src="js/fonctions.js"></script>	
 	</head>
-	<body class="container">
+	<body>
 		<header>
 			<h1><a href="orinoco.html"><img src="images/logo.png" alt="Logo Orinoco - plateforme de vente spécialisée" class="logo"></a></h1>		
 		</header>
-		<nav>
+		<nav class="borderTest">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="row">
-						<btn class="col-sm-4"><a href="panier.html">Votre panier est localStorage</a></btn>
-						<btn class="col-sm-4" onclick=" ViderPanier()">Vider le Panier</btn>
+						<div class="col-sm-6">
+							<button><a href="panier.html">Votre panier <span id="testqte"></span></a><br/>
+
+							</button>
+						</div>
+						<div class="col-sm-6">
+							<button onclick=" ViderPanier()">Vider le Panier
+							</button>
+						</div> 
 					</div>
 
 				</div>
 			</div>
 		</nav>
-			<main>
-				<section id="resultatsPanier">
+			<main class="container">
+				<section id="detailPanier">
 				</section>
-				<section class>
+				<section id="totauxPaniers" class="col-sm-12">
 					<article class="row">
 
 							<div id="qteTotale" class="col-sm-6"></div>
 							<div id="prixTotal" class="col-sm-6"></div>
 					</article>
-					<div id="qteTotale"></div>
-					<div id="prixTotal"></div>
 				</section>
-				<section id="contactClient">
+				<section id="contactClient" class="col-sm-12">
 				</section>
 			</main>
 			<footer>

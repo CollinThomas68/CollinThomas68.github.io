@@ -29,8 +29,9 @@ header {
 .dropdown:hover > #cart-dropdown{
   display: block;
 }
+
 img {
-  width:300px;
+  width:100%;
 }
 
 .container {
@@ -63,7 +64,7 @@ footer a {
 }
 
 .col-sm-12{
-  border:2px solid black;
+
   text-align:center;
 }
 .col-sm-1{

@@ -1,6 +1,7 @@
 /*INITIALISATION ARRIVÉE DU VISITEUR*/
 if (localStorage.getItem("panier") === null) {
     localStorage.setItem("panier", "vide");
+    localStorage.setItem("messagePanier", "vide");
     localStorage.setItem("messageQtePanier","vide");
     localStorage.setItem("messagePrixPanier","vide");
 }
@@ -10,8 +11,6 @@ var ViderPanier = function ViderPanier(){
     localStorage.getItem("panier");
     localStorage.setItem("panier","vide");
     localStorage.setItem("message", "vide");
-    localStorage.setItem("messageQtePanier", "vide");
-    window.location.href="orinoco.html";
 }
 
 function calculQtePanier(tableau){
@@ -19,6 +18,29 @@ function calculQtePanier(tableau){
     console.log('test fonction calcul qte');
     console.log(tableau.reduce(reducer));
     localStorage.setItem("messageQtePanier",tableau.reduce(reducer) );
+}
+
+//test fonction calcul panier dans Fonctions
+function calcQte(){
+    var contenuPanier = JSON.parse(localStorage.getItem("panier")); // Récupération du  panier
+    var tableauQtePanier=[]; //Déclaration du tableau de calcul des quantités
+    for (let x in contenuPanier) { //Inspection du panier
+        var ligneProduitPanier = contenuPanier[x]; //Recherche  ligneProduitLocal par id
+        
+        //Calcul des quantités totales
+        var ligneQtePanier=contenuPanier[x].quantite;
+        console.log(ligneProduitPanier);
+        console.log('Test Qte');
+        console.log(ligneQtePanier);
+        tableauQtePanier.push(Number(contenuPanier[x].quantite));
+        console.log('affichage tableau qte panier'); 
+        console.log(tableauQtePanier);
+        calculQtePanier(tableauQtePanier);
+        var quantiteTotale=localStorage.messageQtePanier;
+        console.log('Test affichage final');
+        console.log(quantiteTotale);
+
+    }
 }
 
 
@@ -86,19 +108,15 @@ function ajoutProduitPanier(produit){
         if( localStorage.getItem("panier")==="vide"){
             const produit = new produitPanier(id, nom, quantite, couleur,adresseHtml,description,prix,image,prixTtl);
             var Panier=[];
-            var panierQte=[];//test
             Panier.push(produit);
-            numberQte=Number(produit.quantite);
-            panierQte.push(numberQte);//test
+
             localStorage.setItem("panier",JSON.stringify(Panier));
-            localStorage.setItem("panierQte",JSON.stringify(panierQte));//test
-            window.location.href="panier.html";
+            window.location.href=adresseHtml;
         } else{
             /*2 hypothèes : -> le produit existe déjà dans le panier, on ne changera donc que la quantité de celui-ci et le prix rapporté à la quantité.
                             -> le produit est absent des produits déjà présents, il faut rajouter une ligne.
             */
         var contenuPanier=JSON.parse(localStorage.getItem("panier"));
-        var quantitePanier=JSON.parse(localStorage.getItem("panierQte"));//test
         var produitExiste=false;
         for (let x in contenuPanier){
 
@@ -107,9 +125,7 @@ function ajoutProduitPanier(produit){
                 produitExiste=true;
                 let qtePanier=Number(contenuPanier[x].quantite);
                 let qteAjoutee=Number(quantite);
-                quantitePanier.push(qteAjoutee);
                 contenuPanier[x].quantite=qtePanier + qteAjoutee;
-
                 contenuPanier[x].prixTtl=contenuPanier[x].quantite * contenuPanier[x].prix;
             }
 
@@ -117,12 +133,9 @@ function ajoutProduitPanier(produit){
         if(!produitExiste){
             const produit = new produitPanier(id, nom,quantite, couleur,adresseHtml,description,prix,image,prixTtl);
             contenuPanier.push(produit);
-            let qteAjoutee=Number(produit.quantite);
-            quantitePanier.push(qteAjoutee);
         }
         localStorage.setItem("panier",JSON.stringify(contenuPanier));
-        localStorage.setItem("panierQte",JSON.stringify(quantitePanier));
-        window.location.href="panier.html";
+        window.location.href=adresseHtml;
     }
     return false;
 }
@@ -131,7 +144,6 @@ function ajoutProduitPanier(produit){
 var ajoutQuantite = function ajoutQuantitePanier(id,couleur){
 
     var contenuPanier=JSON.parse(localStorage.getItem("panier"));
-
     var produitExiste=false;
     for(let x in contenuPanier){
         console.log(contenuPanier[x]);
@@ -139,12 +151,10 @@ var ajoutQuantite = function ajoutQuantitePanier(id,couleur){
             console.log(contenuPanier[x].couleur);
             produitExiste=true;
             contenuPanier[x].quantite++;
-
             contenuPanier[x].prixTtl=contenuPanier[x].quantite * contenuPanier[x].prix;
         }    
     }
     localStorage.setItem("panier",JSON.stringify(contenuPanier));
-
     console.log(contenuPanier);
     
     window.location.href="panier.html";
@@ -227,10 +237,11 @@ var fonctionSubmitContact = function () {
     /*ENVOI*/
 
 
-    var req = new XMLHttpRequest();
-    req.onreadystatechange = function () {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 201) {
             var response = JSON.parse(this.responseText);
+            localStorage.messagePanier = "MERCI";
             localStorage.panier = "vide";
             localStorage.setItem("confirmCommande", response.orderId);
             window.location.href = "remerciement.html"; // Vers la page de confirmation
@@ -238,9 +249,9 @@ var fonctionSubmitContact = function () {
         }
     }; // fin de la fonction
     console.log(commandeToSend);
-    req.open("POST", "http://localhost:3000/api/teddies/order");
-    req.setRequestHeader("Content-Type", "application/json");
-    req.send(JSON.stringify(commandeToSend));
+    xhttp.open("POST", "http://localhost:3000/api/teddies/order");
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify(commandeToSend));
     return false;
 }
 
