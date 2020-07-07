@@ -93,17 +93,19 @@ ajaxGet("http://localhost:3000/api/teddies", function (reponse) {
     console.log(id);
         for(var i=0;i<teddies.length;i++){
             if(id!=teddies[i]._id){
-                let autresProduits='<article class="col-sm-3">'+
-                '<a href="produit.html?id=' + teddies[i]._id+'" class="row">'+
-                    '<div >'+
-                        '<img src="'+teddies[i].imageUrl+'" class="imageListing">'+
-                    '</div>'+
-  
-                '</a>'+
-            '</article>';
-            console
-            let carousel = document.getElementById('lesautres');
-            carousel.innerHTML+= autresProduits;
+                let autresProduits='<div class="col-6 col-lg-3">'+
+                                        '<div class="card">'+
+                                            '<a href="produit.html?id=' +teddies[i]._id+'">'+
+                                                '<img class=”card-img-top” src='+teddies[i].imageUrl+'  width="250" height="150" alt=”Photo Ours”>'+
+                                                '<div class="card-body">'+
+                                                    '<h5 class="card-title">'+teddies[i].name+'</h5>'+
+                                                '</div>'+
+                                            '</a>'+
+                                        '</div>'+
+                                    '</div>';
+
+            let autresTeddies = document.getElementById('lesautres');
+            autresTeddies.innerHTML+= autresProduits;
             }
 
     }
