@@ -16,6 +16,7 @@ var ViderPanier = function ViderPanier(){
     window.location.href="orinoco.html";
 }
 
+/*Fonction Calculer la quantité d'articles du Panier*/
 function calculQtePanier(tableau){
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     console.log('test fonction calcul qte');
@@ -23,14 +24,14 @@ function calculQtePanier(tableau){
     localStorage.setItem("messageQtePanier",tableau.reduce(reducer) );
 }
 
-
+/*Fonction Calculer le Prix Total du Panier*/
 function calculPrixPanier(tableau){
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     console.log('test fonction calcul prix');
     console.log(tableau.reduce(reducer));
     localStorage.setItem("messagePrixPanier",tableau.reduce(reducer) );
 }
-/*FIN*/
+
 
 // Exécute un appel AJAX GET
 // Prend en paramètres l'URL cible et la fonction callback appelée en cas de succès/*
@@ -59,7 +60,7 @@ function ajaxGet(url, callback) {
 
 
 
-
+/*Fonction permettant d'ajouter un produit dans le panier depuis la fiche produit*/
 function ajoutProduitPanier(produit){
     const id= document.getElementById('id').value;
     const nom=document.getElementById('nom').value;
@@ -89,7 +90,7 @@ function ajoutProduitPanier(produit){
             const produit = new produitPanier(id, nom, quantite, couleur,adresseHtml,description,prix,image,prixTtl);
             var Panier=[];
             Panier.push(produit);
-            numberQte=Number(produit.quantite);
+            numberQte=Number(produit.quantite);// A tester
             localStorage.setItem("panier",JSON.stringify(Panier));
             window.location.href="panier.html";
   
@@ -124,7 +125,8 @@ function ajoutProduitPanier(produit){
     return false;
 }
 
-
+// Les fonctions liées à la gestion du panier sont programmées ici !//
+//La première permet de rajouter une quantité de 1 sur le teddy selectionné dans le panier//
 var ajoutQuantite = function ajoutQuantitePanier(id,couleur){
 
     var contenuPanier=JSON.parse(localStorage.getItem("panier"));
@@ -150,7 +152,7 @@ var ajoutQuantite = function ajoutQuantitePanier(id,couleur){
 
 
 
-
+//La deuxième permet de diminuer la quantité de 1 dans le panier sur le teddy selectionné//
 var diminutionQuantite = function diminutionQuantitePanier(id,couleur){
     var contenuPanier=JSON.parse(localStorage.getItem("panier"));
     var produitExiste=false;
@@ -165,6 +167,10 @@ var diminutionQuantite = function diminutionQuantitePanier(id,couleur){
     window.location.href="panier.html";
 }
 
+
+/*La troisième fonction permet de supprimer un article d'u panier
+    Deux possibilités à nouveau :
+    - si le panier contient un seul article*/
 var suppressionArticle = function suppressionArticlePanier(produit){
     var contenuPanier=JSON.parse(localStorage.getItem("panier"));
     if(contenuPanier.length==1){
@@ -172,6 +178,7 @@ var suppressionArticle = function suppressionArticlePanier(produit){
         localStorage.setItem("panier","vide");
         window.location.href="orinoco.html";
     }
+    //si le panier contient plusieurs articles
     else{
         contenuPanier.splice(produit,1);
         localStorage.setItem("panier",JSON.stringify(contenuPanier));
@@ -179,8 +186,8 @@ var suppressionArticle = function suppressionArticlePanier(produit){
     }
 }
 
-
-var fonctionSubmitContact = function () {
+//Envoi de la commande 
+var envoiCommande = function () {
     const prenom = document.getElementById('prenom').value; //recupere prenom
     const nom = document.getElementById('nom').value; //recupere nom 
     const mail = document.getElementById('email').value; //recupere email
@@ -189,7 +196,7 @@ var fonctionSubmitContact = function () {
 
 
     /*format pour l'envoi*/
-    class formatToSend {
+    class formatEnvoiCommande {
         constructor(contact, products) {
             this.contact = contact;
             this.products = products;
@@ -226,8 +233,7 @@ var fonctionSubmitContact = function () {
 
     }
 
- /*Infos=Ok==> la commande prete a envoyer*/
-    const commandeToSend = new formatToSend(contact, products)
+    const commandeToSend = new formatEnvoiCommande(contact, products)
 
     /*ENVOI*/
 
@@ -239,7 +245,7 @@ var fonctionSubmitContact = function () {
             localStorage.panier = "vide";
             localStorage.setItem("confirmCommande", response.orderId);
             window.location.href = "remerciement.html"; // Vers la page de confirmation
-        
+            
         }
     }; // fin de la fonction
     console.log(commandeToSend);

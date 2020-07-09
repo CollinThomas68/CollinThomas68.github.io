@@ -16,10 +16,7 @@
         '<div>'+'</div>';
 
     } else { // panier NON vide
-       /* var quantitePanier=JSON.parse(localStorage.getItem("messageQtePanier"));
 
-        document.getElementById("testqte").textContent = ' contient '+quantitestPanier+' articles !';
-*/
         var contenuPanier = JSON.parse(localStorage.getItem("panier")); // Récupération du  panier
         console.log(contenuPanier);
 
@@ -111,7 +108,7 @@
         } 
         let partieContact =
         '<article class="row">'+
-                    '<form name="formContact" id="idFormContact" onsubmit="return fonctionSubmitContact()" class="col-sm-12">'+
+                    '<form name="formContact" id="idFormContact" onsubmit="return envoiCommande()" class="col-sm-12">'+
                         '<div class="element-form"><label>Nom*:</label><label><input type="text" name="nom" id="nom" class="decoInputContact" pattern="^[A-Z]+$" maxlenght="20" placeholder="Tout en MAJUSCULE !" required></label></div>'+
                         '<div class="element-form"><label>Prénom*:</label><label><input type="text" name="prenom" id="prenom" pattern="^[A-ZÀÁÂÃÄÅÇÑñÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝ]{1}[a-zçàáâãäåçèéêëìíîïðòóôõöøùúûüýÿ]+$" maxlength="25" class="decoInputContact" placeholder="1 majuscule au début..." required></label></div>'+
                         '<div class="element-form"><label>Adresse*:</label><label><input type="text" name="adresse" id="adresse" class="decoInputContact" placeholder="Numéro rue " maxlength="60" required></label></div>'+
