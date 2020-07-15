@@ -12,7 +12,7 @@ ajaxGet("http://localhost:3000/api/teddies", function (reponse) {
             let selectionProduits='<article>'+
                                     '<a href="produit.html?id=' + teddy._id+'" class="row">'+
                                         '<div class="col-sm-6">'+
-                                            '<img src="'+teddy.imageUrl+'" class="imageListing">'+
+                                            '<img src="'+teddy.imageUrl+'" class="imageListing" alt="Image '+teddy.name+'">'+
                                         '</div>'+
                                         '<div class="col-sm-6">'+
                                             '<h2>'+teddy.name+'</h2>'+
