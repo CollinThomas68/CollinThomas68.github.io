@@ -37,9 +37,20 @@ article{
     background-color:$colour-primary;
   }
   
-  img {
-    width:100%;
-  
+  .img{
+    width:225px;
+    @include littleSize{
+      width:300px;
+    }
+    @include mediumSize{
+      width:313px;
+    }
+    @include largeSize{
+      width:433px;
+    }
+    @include xlargeSize{
+      width:523px;
+    }
   }
   h2,h5{
     font-family: "cfcrayons-regular", sans-serif;

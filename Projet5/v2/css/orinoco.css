@@ -34,8 +34,28 @@ article {
   background-color: #f3e9f1;
 }
 
-img {
-  width: 100%;
+.img {
+  width: 225px;
+}
+@media all and (min-width: 576px) {
+  .img {
+    width: 300px;
+  }
+}
+@media all and (min-width: 768px) {
+  .img {
+    width: 313px;
+  }
+}
+@media all and (min-width: 992px) {
+  .img {
+    width: 433px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .img {
+    width: 523px;
+  }
 }
 
 h2, h5 {
