@@ -1,5 +1,5 @@
 
-if (localStorage.confirmationCommande !== "KO") {
+if (localStorage.confirmationCommande !== "") {
 
 
     document.getElementById("confirmation").innerHTML =

@@ -230,7 +230,7 @@ var envoiCommande = function () {
             this.products = products;
         }
     }
-    //On créé une class pour l\'utilisateur
+    //On créé une class pour l'utilisateur
     class Utilisateur {
         constructor(prenom, nom, adresse, ville, mail) {
             this.firstName = prenom;
