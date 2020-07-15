@@ -6,7 +6,7 @@
 		<meta charset="utf-8" />
 		<title>Orinoco : La platerfome de vente spécialisée</title>
 		<link rel="stylesheet" href="css/orinoco.css" />
-		<script src="https://kit.fontawesome.com/2bf62e9506.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/2bf62e9506.js" crossorigin="anonymous" SameSite="none"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width" />
 
@@ -15,17 +15,17 @@
 			<header>
 				<h1><a href="orinoco.html"><img src="images/logo.png" alt="Logo Orinoco - plateforme de vente spécialisée" class="logo"></a></h1>		
 			</header>
-			<nav>
+			<nav class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="row">
-							<div class="col-6">
-								<button><a href="panier.html"id ="affichagePanier"></a><br/>
+						<div class="row panier">
+							<div class="col-sm-6">
+								<button class="btnPanier"><a href="panier.html"id ="affichagePanier"></a><br/>
 
 								</button>
 							</div>
-							<div class="col-6">
-								<button onclick=" ViderPanier()">Vider le Panier
+							<div class="col-sm-6">
+								<button  class="btnviderPanier" onclick=" ViderPanier()">Vider le Panier
 								</button>
 							</div> 
 						</div>

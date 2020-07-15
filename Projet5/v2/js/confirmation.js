@@ -1,19 +1,18 @@
-/*CONFIRMATION ET RETOUR CATALOGUE*/
-if (localStorage.confirmCommande !== "KO") {
+
+if (localStorage.confirmationCommande !== "KO") {
 
 
     document.getElementById("confirmation").innerHTML =
-        '<div class="messageConfirmationCommande">'+
-            '<p>Votre commande n° ' + localStorage.confirmCommande + ' a bien été prise en compte pour un montant total de '+localStorage.messagePrixPanier/100+' €</p>'+
+        '<article class="text-center">'+
+            '<p>Votre commande n° ' + localStorage.confirmationCommande + ' a bien été prise en compte pour un montant total de '+localStorage.messagePrixPanier/100+' €</p>'+
 
             '<p>Merci encore pour votre commande</p>'+
             '<p><a href="orinoco.html">Retour à l\'accueil</a></p>'+
-        '</div>';
+        '</article>';
 } else {
     document.getElementById("confirmation").innerHTML =
-        '<div class="messageConfirmationCommande">'+
+        '<article class="text-center">'+
             '<p>Un problème technique vient de survenir, merci de réitérer votre commande dans quelques instants</p>'+
             '<p><a href="orinoco.html">Retour à l\'accueil</a></p>'+
-        '</div>';
+        '</article>';
 }
-/*FIN*/

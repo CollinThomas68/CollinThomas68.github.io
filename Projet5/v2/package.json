@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "sass": "sass --watch ./css/scss/orinoco.scss:./css/orinoco.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

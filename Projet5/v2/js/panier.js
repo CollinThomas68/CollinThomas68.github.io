@@ -1,12 +1,12 @@
 
-     
+     affichageNav();
      
      if (JSON.parse(localStorage.getItem("panier") === "vide")) { //Panier vide 
 
 
  
 
-        document.getElementById("affichagePanier").innerHTML = '<i class="fas fa-shopping-basket"></i>';
+
         document.getElementById("detailPanier").innerHTML = 
             '<article class="row">'+
                 '<div class="col-12">'+
@@ -19,7 +19,6 @@
 
     } else { // panier NON vide
         var quantitePanier=JSON.parse(localStorage.getItem("messageQtePanier"));
-        document.getElementById("affichagePanier").innerHTML = '<i class="fas fa-shopping-basket"></i><span>'+quantitePanier+'</span>' ;
         var contenuPanier = JSON.parse(localStorage.getItem("panier")); // Récupération du  panier
         console.log(contenuPanier);
         var tableauPrixPanier=[];//Déclaration du tableau de calcul des prix
@@ -41,18 +40,18 @@
             var boutonMoins = "";
 
             if (ligneProduitPanier.quantite > 1) {
-                boutonMoins = '<button class="boutonMoins" onclick="diminutionQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')">-1</button>';
+                boutonMoins = '<button class="boutonMoins" onclick="diminutionQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')"><b>-1</b></button>';
             } else {
-                boutonMoins = '<button class="boutonMoins" onclick="suppressionArticle(' + x + ')">Suppression</i></button>';
+                boutonMoins = '<button class="boutonMoins" onclick="suppressionArticle(' + x + ')"><b>Suppr.</b></button>';
             }
 
             // creationligne produit
             let ligne =
-                '<article class="row borderTest">'+
+                '<article class="row">'+
                     '<div class="col-md-10">'+
                         '<a href="'+ligneProduitPanier.adresseHtml +'">'+
                             '<div class="row">'+
-                                '<div class="col-md-6 border"><img src="' + ligneProduitPanier.image + '" title="' + ligneProduitPanier.id + '"></div>'+
+                                '<div class="col-md-6"><img src="' + ligneProduitPanier.image + '" title="' + ligneProduitPanier.id + '"></div>'+
                                 '<div class="col-md-3">'+
                                     '<div>' + ligneProduitPanier.nom + '</div>'+
                                     '<div><b>Couleur: </b><span id="couleurPanier">' + ligneProduitPanier.couleur + '</span></div>'+
@@ -68,7 +67,7 @@
                         '</a>'+
                     '</div>'+
                     '<div class="col-md-2">'+
-                        '<button class="boutonPlus" onclick="ajoutQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')">+1</button>' + 
+                        '<button class="boutonPlus" onclick="ajoutQuantite(\'' + ligneProduitPanier.id + '\',\''+ligneProduitPanier.couleur+'\')"><b>+1</b></button>' + 
                         boutonMoins + 
                     '</div>'+
                 '</article>';
@@ -82,17 +81,17 @@
             let recapTTL="";
             if(quantiteTotale>1){
                 recapTTL=
-                '<article class="row borderTest text-center">'+
+                '<article class="row text-center">'+
                 '<h2 class="col-12">Récapitulatif de votre commande</h2>'+
-                '<div id="qteTotale" class="col-sm-6"><span>Votre panier contient '+quantiteTotale + ' articles</span></div>'+
-                '<div id="prixTotal" class="col-sm-6"><span>Le montant total de votre commande s\'élève à '+ prixTotal/100 + '€</span></div>'+
+                '<div id="qteTotale" class="col-sm-6"><span>Votre panier contient <b>'+quantiteTotale + '</b> articles</span></div>'+
+                '<div id="prixTotal" class="col-sm-6"><span>Le montant total de votre commande s\'élève à <b>'+ prixTotal/100 + '€</b></span></div>'+
                 '</article>';
             }else{
                 recapTTL=
-                '<article class="row borderTest text-center">'+
+                '<article class="row text-center">'+
                 '<h2 class="col-12">Récapitulatif de votre commande</h2>'+
-                '<div id="qteTotale" class="col-sm-6"><span>Votre panier contient '+quantiteTotale + ' article</span></div>'+
-                '<div id="prixTotal" class="col-sm-6"><span>Le montant total de votre commande s\'élève à '+ prixTotal/100 + '€</span></div>'+
+                '<div id="qteTotale" class="col-sm-6"><span>Votre panier contient <b>'+quantiteTotale + '</b> article</span></div>'+
+                '<div id="prixTotal" class="col-sm-6"><span>Le montant total de votre commande s\'élève à <b>'+ prixTotal/100 + '€</b></span></div>'+
                 '</article>';               
             }
                         
@@ -103,13 +102,13 @@
         let partieContact =
         '<article class="row">'+
                     '<form name="formContact" id="idFormContact" onsubmit="return envoiCommande()" class="col-12">'+
-                        '<div class="element-form"><label>Nom*:</label><label><input type="text" name="nom" id="nom" pattern="^[A-Z\' ]+$" maxlenght="20" placeholder="Tout en MAJUSCULE !" required></label></div>'+
-                        '<div class="element-form"><label>Prénom*:</label><label><input type="text" name="prenom" id="prenom" pattern="^[A-ZÀÁÂÃÄÅÇÑñÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝ]{1}[a-zçàáâãäåçèéêëìíîïðòóôõöøùúûüýÿ]+$" maxlength="25" placeholder="1 majuscule au début..." required></label></div>'+
-                        '<div class="element-form"><label>Adresse*:</label><label><input type="text" name="adresse" id="adresse" placeholder="Numéro rue " maxlength="60" required></label></div>'+
-                        '<div class="element-form"><label>CP*:</label><label><input type="text" name="codePostal" id="codePostal" pattern="[0-9]{5}" maxlength="5" placeholder="5 chiffres !" required></label></div>'+
-                        '<div class="element-form"><label>Ville*:</label><label><input type="text" name="ville" id="ville" pattern="^[A-ZÀÁÂÃÄÅÇÑñÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝ]+$" maxlength="30" placeholder="Tout en MAJUSCULE !"  required></label></div>'+
-                        '<div class="element-form"><label>Email*:</label><label><input type="email" name="mail" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$" placeholder="Une adresse email !"required></label></div>'+
-                        '<div id="inputContact">'+
+                        '<div class="form-group row"><label class="col-12 col-sm-3">Nom*:</label><input type="text"  class="col-12 col-sm-9" name="nom" id="nom" pattern="^[A-Z\' ]+$" maxlenght="20" placeholder="Tout en MAJUSCULE !" required></div>'+
+                        '<div class="form-group row"><label class="col-12 col-sm-3">Prénom*:</label><input type="text"  class="col-12 col-sm-9" name="prenom" id="prenom" pattern="^[A-ZÀÁÂÃÄÅÇÑñÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝ]{1}[a-zçàáâãäåçèéêëìíîïðòóôõöøùúûüýÿ]+$" maxlength="25" placeholder="1 majuscule au début..." required></div>'+
+                        '<div class="form-group row"><label class="col-12 col-sm-3">Adresse*:</label><input type="text"  class="col-12 col-sm-9" name="adresse" id="adresse" placeholder="Votre adresse " maxlength="60" required></div>'+
+                        '<div class="form-group row"><label class="col-12 col-sm-3">CP*:</label><input type="text"  class="col-12 col-sm-9" name="codePostal" id="codePostal" pattern="[0-9]{5}" maxlength="5" placeholder="5 chiffres !" required></div>'+
+                        '<div class="form-group row"><label class="col-12 col-sm-3">Ville*:</label><input type="text"  class="col-12 col-sm-9" name="ville" id="ville" pattern="^[A-ZÀÁÂÃÄÅÇÑñÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝ\' -]+$" maxlength="30" placeholder="Tout en MAJUSCULE !"  required></div>'+
+                        '<div class="form-group row"><label class="col-12 col-sm-3">Email*:</label><input type="email"  class="col-12 col-sm-9" name="mail" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$" placeholder="Une adresse email !"required></div>'+
+                        '<div id="inputContact" class="text-center">'+
 
                             '<input type="submit" value="Valider la commande" id="bouton_envoi">'+
                         '</div>'+

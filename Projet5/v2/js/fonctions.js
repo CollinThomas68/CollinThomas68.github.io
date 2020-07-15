@@ -1,28 +1,35 @@
-/*INITIALISATION ARRIVÉE DU VISITEUR*/
+//toute première opération
 if (localStorage.getItem("panier") === null) {
     localStorage.setItem("panier", "vide");
     localStorage.setItem("messageQtePanier","vide");
     localStorage.setItem("messagePrixPanier","vide");
-    localStorage.setItem("tableauTeddy","vide");
 }
 
-/*Fonction Vider la Panier*/
+//
+var affichageNav= function Nav(){
+if (JSON.parse(localStorage.getItem("panier") === "vide")) { //Panier vide 
+    document.getElementById("affichagePanier").innerHTML = '<i class="fas fa-shopping-basket fa-4x"></i>';
+} else { // panier NON vide
+    var quantitePanier=JSON.parse(localStorage.getItem("messageQtePanier"));
+    document.getElementById("affichagePanier").innerHTML = '<i class="fas fa-shopping-basket fa-4x"></i><div class="qtePanier">'+quantitePanier+'</div>' ;
+}
+}
+//Fonction Vider le Panier
 var ViderPanier = function ViderPanier(){
     localStorage.getItem("panier");
     localStorage.setItem("panier","vide");
-    localStorage.setItem("message", "vide");
     localStorage.setItem("messageQtePanier", "vide");
     localStorage.setItem("messagePrixPanier","vide");
     window.location.href="orinoco.html";
 }
 
-/*Fonction Calculer la quantité d'articles du Panier*/
+//Fonction Calculer la quantité d'articles du Panier
 function calculQtePanier(tableau){
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     localStorage.setItem("messageQtePanier",tableau.reduce(reducer) );
 }
 
-/*Fonction Calculer le Prix Total du Panier*/
+//Fonction Calculer le Prix Total du Panier
 function calculPrixPanier(tableau){
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     console.log('test fonction calcul prix');
@@ -216,15 +223,15 @@ var envoiCommande = function () {
     const adresse = document.getElementById('adresse').value; //recupere adresse  
 
 
-    /*format pour l'envoi*/
-    class formatEnvoiCommande {
+    //On crée une class pour l'envoi de la commande basée sur contact(info formulaire) et products(listing id du panier)
+    class Commande {
         constructor(contact, products) {
             this.contact = contact;
             this.products = products;
         }
     }
-    /*format pour l'utilisateur*/
-    class formatUtilisateur {
+    //On créé une class pour l\'utilisateur
+    class Utilisateur {
         constructor(prenom, nom, adresse, ville, mail) {
             this.firstName = prenom;
             this.lastName = nom;
@@ -234,11 +241,11 @@ var envoiCommande = function () {
         }
     }
 
-    /*construction de l'utilisateur*/
-    const contact = new formatUtilisateur(prenom, nom, adresse, ville, mail);
+    //Création du contact en se basant sur la class précédente et les données du formulaire
+    const contact = new Utilisateur(prenom, nom, adresse, ville, mail);
 
 
-    /*construction de l'array avec uniquement les identifiants des produits*/
+    //construction de l'array products avec uniquement les identifiants des produits
     var contenuPanier=JSON.parse(localStorage.getItem("panier"));
     console.log('Affichage contenuPanier')
     console.log(contenuPanier);
@@ -254,9 +261,9 @@ var envoiCommande = function () {
 
     }
 
-    const commandeToSend = new formatEnvoiCommande(contact, products)
+    const commandecomplete = new Commande(contact, products)
 
-    /*ENVOI*/
+    //Envoi de la commande
 
 
     var req = new XMLHttpRequest();
@@ -264,15 +271,15 @@ var envoiCommande = function () {
         if (this.readyState == 4 && this.status == 201) {
             var response = JSON.parse(this.responseText);
             localStorage.panier = "vide";
-            localStorage.setItem("confirmCommande", response.orderId);
+            localStorage.setItem("confirmationCommande", response.orderId);//On enregistre l'Id obtenu en retour
             window.location.href = "remerciement.html"; // Vers la page de confirmation
             
         }
     }; // fin de la fonction
-    console.log(commandeToSend);
+    console.log(commandecomplete);
     req.open("POST", "http://localhost:3000/api/teddies/order");
     req.setRequestHeader("Content-Type", "application/json");
-    req.send(JSON.stringify(commandeToSend));
+    req.send(JSON.stringify(commandecomplete));
     return false;
 }
 
