@@ -51,7 +51,7 @@
                     '<div class="col-md-10">'+
                         '<a href="'+ligneProduitPanier.adresseHtml +'">'+
                             '<div class="row">'+
-                                '<div class="col-md-6"><img src="'+ ligneProduitPanier.image +'" title="' + ligneProduitPanier.id + '" alt="'+ligneProduitPanier.nom+'" class="detail"></div>'+
+                                '<div class="col-md-6"><img src="'+ ligneProduitPanier.image +'" title="' + ligneProduitPanier.id +'" alt="'+ligneProduitPanier.nom+'" class="detail"></div>'+
                                 '<div class="col-md-3">'+
                                     '<div>' + ligneProduitPanier.nom + '</div>'+
                                     '<div><b>Couleur: </b><span id="couleurPanier">' + ligneProduitPanier.couleur + '</span></div>'+
