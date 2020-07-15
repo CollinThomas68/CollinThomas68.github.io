@@ -37,10 +37,14 @@ article{
     background-color:$colour-primary;
   }
   
-  .img{
+  .imageListing{
     width:225px;
+    @include miniSize{
+      width:350px;
+      
+    }
     @include littleSize{
-      width:300px;
+      width:250px;
     }
     @include mediumSize{
       width:313px;
@@ -62,4 +66,5 @@ article{
   .col-sm-1{
     padding:0px!important;
   }
+  
   

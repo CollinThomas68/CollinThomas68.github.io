@@ -2,6 +2,11 @@
       box-shadow: 10px 5px 5px black;
 }
 
+@mixin miniSize {
+      @media all and (min-width: map-get($breakpoints, mini)){
+          @content;
+      }
+    }
 @mixin littleSize {
       @media all and (min-width: map-get($breakpoints, little)){
           @content;

@@ -43,7 +43,7 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
 
         let produitChoisi = '<article>' +
                                 '<div>'+
-                                    '<img src="'+teddy.imageUrl+'" alt="'+teddy.name+'">'+
+                                    '<img src="'+teddy.imageUrl+'" alt="'+teddy.name+'" class="detail">'+
                                 '</div>'+
                                 '<div class="affichageProduit">'+
                                     '<div>'+
@@ -87,7 +87,7 @@ ajaxGet("http://localhost:3000/api/teddies", function (reponse) {
                 let autresProduits='<div class=" col-6 col-md-4 col-lg-3">'+
                                         '<div class="card">'+
                                             '<a href="produit.html?id=' +teddies[i]._id+'">'+
-                                                '<img class=”card-img-top” src='+teddies[i].imageUrl+'  width="250" height="150" alt=”Photo Ours”>'+
+                                                '<img class="card-img-top detail" src='+teddies[i].imageUrl+'  height="150" alt=”Photo Ours”>'+
                                                 '<div class="card-body">'+
                                                     '<h5 class="card-title text-center">'+teddies[i].name+'</h5>'+
                                                 '</div>'+

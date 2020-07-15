@@ -34,26 +34,31 @@ article {
   background-color: #f3e9f1;
 }
 
-.img {
+.imageListing {
   width: 225px;
 }
+@media all and (min-width: 400px) {
+  .imageListing {
+    width: 350px;
+  }
+}
 @media all and (min-width: 576px) {
-  .img {
-    width: 300px;
+  .imageListing {
+    width: 250px;
   }
 }
 @media all and (min-width: 768px) {
-  .img {
+  .imageListing {
     width: 313px;
   }
 }
 @media all and (min-width: 992px) {
-  .img {
+  .imageListing {
     width: 433px;
   }
 }
 @media all and (min-width: 1200px) {
-  .img {
+  .imageListing {
     width: 523px;
   }
 }
@@ -172,5 +177,14 @@ footer a {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.detail {
+  width: 100%;
+}
+
+/*
+.card-img-top{
+  width:100%;
+}*/
 
 /*# sourceMappingURL=orinoco.css.map */
