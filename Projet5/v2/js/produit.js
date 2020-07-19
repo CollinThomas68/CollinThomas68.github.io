@@ -54,12 +54,13 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
                                             '<p>'+teddy.price / 100+'€</p>'+
                                             '<div>'+
                                                 '<form onsubmit="return ajoutProduitPanier()">'+
-                                                    '<label for="choixQuantite">Quantité : </label><span class="espace"><select name="quantite" id="choixQuantite">'+ qteTeddy + '</select></span>'+
-                                                    '<label for="choixCouleur">Couleur : </label><span class="espace"><select name="couleur" id="choixCouleur">'+choixCouleurs+'</select></span>'+
+                                                    '<label for="quantite">Quantité : </label><span class="espace"><select name="quantite" id="quantite">'+ qteTeddy + '</select></span>'+
+                                                    '<label for="couleur">Couleur : </label><span class="espace"><select name="couleur" id="couleur">'+choixCouleurs+'</select></span>'+
                                                     '<input type="hidden" name="id" id="id" value="'+teddy._id+'">'+
                                                     '<input type="hidden" name="adresseHtml" id="adresseHtml" value="produit.html?id='+teddy._id+'">'+
                                                     '<input type="hidden" name="nom" id="nom" value="'+teddy.name+'">'+
-                                                    '<input type="hidden" name="quantite" id="quantite"value="1">'+
+
+                                                    //'<input type="hidden" name="quantite" id="quantite"value="1">'+
                                                     '<input type="hidden" name="description" id="description" value="'+teddy.description+'">'+
                                                     '<input type="hidden" name="prix" id="prix" value="'+teddy.price+'">'+
                                                     '<input type="hidden" name="image" id="image" value="'+teddy.imageUrl+'">'+
