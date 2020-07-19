@@ -54,8 +54,8 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
                                             '<p>'+teddy.price / 100+'€</p>'+
                                             '<div>'+
                                                 '<form onsubmit="return ajoutProduitPanier()">'+
-                                                    '<label for="choixquantite">Quantité : </label><span class="espace"><select name="quantite" id="choixQuantite">'+ qteTeddy + '</select></span>'+
-                                                    '<label for="choixcouleur">Couleur : </label><span class="espace"><select name="couleur" id="choixCouleur">'+choixCouleurs+'</select></span>'+
+                                                    '<label for="choixQuantite">Quantité : </label><span class="espace"><select name="quantite" id="choixQuantite">'+ qteTeddy + '</select></span>'+
+                                                    '<label for="choixCouleur">Couleur : </label><span class="espace"><select name="couleur" id="choixCouleur">'+choixCouleurs+'</select></span>'+
                                                     '<input type="hidden" name="id" id="id" value="'+teddy._id+'">'+
                                                     '<input type="hidden" name="adresseHtml" id="adresseHtml" value="produit.html?id='+teddy._id+'">'+
                                                     '<input type="hidden" name="nom" id="nom" value="'+teddy.name+'">'+
