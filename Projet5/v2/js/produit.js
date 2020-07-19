@@ -91,7 +91,7 @@ ajaxGet("http://localhost:3000/api/teddies", function (reponse) {
                                             '<a href="produit.html?id=' +teddies[i]._id+'">'+
                                                 '<img class="card-img-top detail" src='+teddies[i].imageUrl+'  height="150" alt=”Photo Ours”>'+
                                                 '<div class="card-body">'+
-                                                    '<h5 class="card-title text-center">'+teddies[i].name+'</h5>'+
+                                                    '<h3 class="card-title text-center">'+teddies[i].name+'</h3>'+
                                                 '</div>'+
                                             '</a>'+
                                         '</div>'+
