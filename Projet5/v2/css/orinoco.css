@@ -34,6 +34,11 @@ article {
   background-color: #f3e9f1;
 }
 
+.accueil {
+  display: flex;
+  justify-content: center;
+}
+
 .imageListing {
   width: 225px;
 }
