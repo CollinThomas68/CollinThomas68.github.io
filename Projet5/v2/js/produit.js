@@ -50,7 +50,6 @@ ajaxGet(`http://localhost:3000/api/teddies/${id}`, function (reponse) {
                                     '</div>'+
                                     '<div class="affichageProduit">'+
                                         '<div>'+
-                                           // '<h3>'+teddy.name+'</h3>'+
                                             '<p>'+teddy.description+'</p>'+
                                             '<p>'+teddy.price / 100+'€</p>'+
                                             '<div>'+
