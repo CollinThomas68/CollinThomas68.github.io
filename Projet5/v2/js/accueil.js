@@ -1,4 +1,4 @@
-var teddiesElt = document.getElementById("teddies");
+
 //affichage du panier en haut de page avec la quantité d'articles s'y trouvant
 affichageNav();
 
