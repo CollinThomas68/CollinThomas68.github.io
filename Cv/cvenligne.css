@@ -1,0 +1,302 @@
+#bloc-page
+{
+	display:flex;
+	flex-direction:column-reverse;
+}
+
+
+body
+{
+    padding-top:25px;
+}
+
+
+.row
+{
+	padding-top:15px;
+}
+
+#Infoperso
+{
+	background-color: #feca07;
+}
+
+#Infoperso p
+{
+	font-size: 0.7em;
+	padding-left :30px;
+	padding-right:30px;
+	color:#4d4c49;
+}
+
+.photomobile
+{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:200px;
+
+}
+
+.photodesktop
+{
+	display:none;
+}
+
+.col-md-3 h2
+{
+	display:flex;
+	background-color: #404040;
+	color:#feca07;
+	font-size:95%;
+	height:30px;
+	margin-right:-15px;
+	margin-left:-15px;
+	justify-content: center;
+	align-items: center;
+}
+#mobiletop
+{
+	padding-top:0px;
+}
+
+#Contact p
+{
+	font-weight: bold;
+}
+#Apropos
+{
+	height:auto;
+}
+#Apropos p
+{
+	text-align:justify;
+}
+
+#Loisirs
+{
+	height:150px;
+}
+figure
+{
+	color: #404040;
+	display:flex;
+	justify-content: space-around;
+	width:100%;
+	margin:auto;
+	padding-top:25px;
+}
+
+h1,h1+p
+{
+width: auto;
+text-align:center;
+}
+
+
+.orange
+{
+	color:#feca07;
+}
+
+
+
+.souligne
+{
+	border-bottom: 1px solid #feca07;
+}
+
+#Infopro h2
+{
+	padding-top:30px;
+	border-bottom: 1px solid #feca07;
+	font-size:150%;
+}
+
+
+#Infopro i
+{
+	width:50px;
+
+}
+
+ul
+{
+	list-style-image:url(images/puces4.png) ;
+}
+
+
+
+.premierepuce
+{
+	list-style-image:url(images/puces3.png) ;
+}
+
+.col-md-6 p
+{
+	padding-left:40px;
+}
+
+@media (min-width: 768px) 
+{
+  .container 
+	{
+    width: 750px;
+
+ 	}
+ 	#bloc-page
+	{
+	display:flex;
+	flex-direction:row;
+	}
+
+	.photodesktop
+	{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:200px;
+	}
+
+	.photomobile
+	{
+	display:none;
+	}
+	#Apropos
+	{
+		height:600px;
+	}
+	#Loisirs
+	{
+		height:300px;
+	}
+	h1,h1+p
+	{
+	width: auto;
+	text-align:left;
+	}
+
+ 	#Infopro h2
+	{
+	font-size:200%;
+	}
+
+
+	#Infopro
+	{	
+	padding-left:50px;
+	padding-right:50px;
+	}
+	figure
+	{
+	display:flex;
+	flex-direction: column;
+	margin:auto;
+	align-items: center;
+	padding-top:25px;
+	}
+}
+
+@media (min-width: 992px) 
+{
+  .container 
+  	{
+    width: 970px;
+ 	 }
+	#Apropos
+	{
+		height:550px;
+	}
+	#Loisirs
+	{
+		height: 150px;}
+	figure
+	{
+	
+	flex-direction: row;
+	justify-content: space-around;
+	width:90%;
+	margin:auto;
+	padding-top:25px;
+
+	}
+}
+
+@media (min-width: 1200px) 
+{
+  .container {
+    width: 1170px;
+  }
+}
+
+@supports (-ms-ime-align:auto) 
+{
+
+	ul 
+	{
+	list-style-image: none;
+	margin: 0;
+	padding-left: 20px;
+	list-style-type: none;	
+	}
+	.classique
+	{
+		list-style-type: none;
+	}
+
+.premierepuce 
+	{
+		list-style-image: none;
+    background: url(images/puces3.png) no-repeat 0 18px;
+	margin-right: 0;
+	padding: 0 0 0 22px;
+	}
+
+.autrepuce 
+	{
+    background: url(images/puces4.png) no-repeat 0 18px;
+	margin-right: 0;
+	padding: 0 0 0 22px;
+	}
+	.classique
+	{
+	list-style-image:url(images/puces4.png);
+	}
+
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+{
+     /* IE10+ CSS  */
+     	ul 
+	{
+	list-style-image: none;
+	margin: 0;
+	padding-left: 20px;
+	list-style-type: none;	
+	}
+	.classique
+	{
+		list-style-type: none;
+	}
+
+.premierepuce 
+	{
+		list-style-image: none;
+    background: url(images/puces3.png) no-repeat 0 18px;
+	margin-right: 0;
+	padding: 0 0 0 22px;
+	}
+
+.autrepuce 
+	{
+    background: url(images/puces4.png) no-repeat 0 18px;
+	margin-right: 0;
+	padding: 0 0 0 22px;
+	}
+	.classique
+	{
+	list-style-image:url(images/puces4.png);
+	}
+}
+
