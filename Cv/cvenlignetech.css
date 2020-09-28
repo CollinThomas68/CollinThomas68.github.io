@@ -23,11 +23,14 @@ body
 
 #Infoperso p
 {
-	font-size: 0.7em;
+	font-size: 1em;
 	padding-left :30px;
 	padding-right:30px;
 	color:#4d4c49;
+	text-align: center;
 }
+
+
 
 .photomobile
 {
@@ -127,6 +130,7 @@ text-align:center;
 ul
 {
 	list-style-image:url(images/puces4.png) ;
+
 }
 
 li{
@@ -140,13 +144,27 @@ li{
 
 .autrepuce{
     margin-left:0px;
-    padding-left:40px;
+
 }
 
-.border{
-    border:2px solid black;
+.perso{
+	list-style-type: disc;
+	list-style-image:none;
 }
-
+ul.perso>li{
+	padding-left:5px;
+}
+.decal{
+	margin-left:20px;
+}
+.grand{
+	font-size:1em;
+	padding-top:20px;
+}
+.topbottom{
+	padding-top:20px;
+	padding-bottom:20px;
+}
 @media (min-width: 768px) 
 {
   .container 
@@ -154,24 +172,24 @@ li{
     width: 750px;
 
  	}
- 	#bloc-page
-	{
-	display:flex;
-	flex-direction:row;
-	}
+	 #bloc-page
+	 {
+	 display:flex;
+	 flex-direction:row;
+	 }
+	 .photodesktop
+   {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height:200px;
+   }
 
-	.photodesktop
-	{
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	height:200px;
-	}
-
-	.photomobile
-	{
-	display:none;
-	}
+   .photomobile
+   {
+   display:none;
+   }
+   
 	#Apropos
 	{
 		height:600px;
@@ -212,7 +230,12 @@ li{
   .container 
   	{
     width: 970px;
- 	 }
+	  }
+
+	.mail{
+		padding-left:0px!important;
+		padding-right:0px!important;
+	 }
 	#Apropos
 	{
 		height:550px;
@@ -237,6 +260,9 @@ li{
   .container {
     width: 1170px;
   }
+  .mail{
+	font-size: 1em;
+ }
 }
 
 @supports (-ms-ime-align:auto) 
