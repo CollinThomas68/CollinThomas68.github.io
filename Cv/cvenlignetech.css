@@ -129,16 +129,22 @@ ul
 	list-style-image:url(images/puces4.png) ;
 }
 
-
+li{
+    padding-left:25px;
+}
 
 .premierepuce
 {
-	list-style-image:url(images/puces3.png) ;
+    list-style-image:url(images/puces3.png) ;
 }
 
-.col-md-6 p
-{
-	padding-left:40px;
+.autrepuce{
+    margin-left:0px;
+    padding-left:40px;
+}
+
+.border{
+    border:2px solid black;
 }
 
 @media (min-width: 768px) 
