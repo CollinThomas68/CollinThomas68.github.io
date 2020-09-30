@@ -50,7 +50,7 @@ body
 	display:none;
 }
 
-.col-md-4 h2
+.col-md-3 h2
 {
 	display:flex;
 	background-color: #404040;
@@ -165,6 +165,11 @@ ul.perso>li{
 	padding-top:20px;
 	padding-bottom:20px;
 }
+.mail{
+ 
+    padding-left:0px!important;
+    padding-right:0px!important;
+ }
 @media (min-width: 768px) 
 {
   .container 
@@ -232,11 +237,7 @@ ul.perso>li{
     width: 970px;
 	  }
 
-	.mail{
-		margin-left:-50px;
-		padding-left:0px!important;
-		padding-right:0px!important;
-	 }
+
 	#Apropos
 	{
 		height:550px;
