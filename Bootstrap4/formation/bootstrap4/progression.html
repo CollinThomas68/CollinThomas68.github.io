@@ -4,35 +4,45 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Les boutons</title>
+        <title>Les barres de progression</title>
     </head>
     <body>
         <!-- HEADER -->
         <header class="sticky-top bg-danger text-white p-3">
             <div class="container">
-            <h1> Les boutons</h1>
+            <h1>Les barres de progression</h1>
             </div>
         </header>
         
         <!-- PREMIERE SECTION -->
-        <section class="py-5 text-center">
+     
+        <section class="p-5 text-left">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Accueil</a></li>
                 <li class="breadcrumb-item"><a href="../formation.html">Formation</a></li>
-                <li class="breadcrumb-item active">Les boutons</a></li>
+                <li class="breadcrumb-item active">Les barres de progression</a></li>
             </ol>
-            <h2 class="mb-5">Les différents boutons :</h2>
-                <a href="" class= "btn btn-danger  m-1">Bouton</a>
-                <a href="" class= "btn btn-outline-danger  m-1">Bouton(outline)</a>
-                <a href="" class= "btn btn-danger btn-sm  m-1">Bouton(sm)</a>
-                <a href="" class= "btn btn-danger btn-lg  m-1">Bouton(lg)</a></br>
-                <a href="" class= "btn btn-danger btn-block  m-1">Bouton(Block)</a>
-
+            <h2>Barre de progression simple</h2>
+            <div class="progress mt-2">
+                <div class="progress-bar bg-success" style="width:40%">40%</div>
+            </div>
+            <h2>Barre de progression multiple</h2>
+            <div class="progress mt-2">
+                <div class="progress-bar bg-success" style="width:40%">40%</div>
+                <div class="progress-bar bg-danger" style="width:25%">25%</div>
+                <div class="progress-bar bg-warning" style="width:18%">18%</div>
+            </div>
+            <h2>Barre de progression striée</h2>
+            <div class="progress mt-2">
+                <div class="progress-bar progress-bar-striped" style="width:40%">40%</div>
+            </div>
         </section>
-        
+
         <div class="p-5 text-center">
             <a href="../formation.html" class= "btn btn-success">Retour au sommaire</a>
         </div>
+        
+
         
         <!-- FOOTER -->
         <footer class="bg-danger text-white text-right p-3">
