@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>La grille Bootstrap</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="sticky-top bg-danger text-white p-3">
+            <div class="container">
+            <h1>La grille Bootstrap</h1>
+            </div>
+        </header>
+        
+        <!-- PREMIERE SECTION -->
+     
+        <section class="p-5 text-left">
+            <h2>La grille</h2>
+            <div class="row">
+                <div class="col bg-dark">a</div>
+                <div class="col bg-success">b</div>
+            </div>
+            <div class="row">
+                <div class="col bg-success">a</div>
+                <div class="col bg-dark">b</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 bg-success">a</div>
+                <div class="col-md-6 bg-dark">b</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 bg-success">a</div>
+                <div class="col-sm-6 bg-dark">b</div>
+            </div>
+
+            <h2>Prioriser les éléments</h2>
+            <p>On utilise la classe order- pour modifier l'ordre. </p>
+            <div class="row">
+                <div class="col bg-dark order-2 text-white">Codé en premier mais order-2</div>
+                <div class="col bg-success">Codé en second</div>
+            </div>
+
+            <h2>Décaler d'un certain nombre de colonnes avec offset</h2>
+            <p>On peut utiliser la classe offset- si on utilise col, offset-sm si col-sm, ... pour décaler</p>
+            <div class="row">
+                <div class="col bg-dark text-white">a</div>
+                <div class="col bg-success">b</div>
+            </div>
+            <div class="row mt-1">
+                <div class="col bg-success">a</div>
+                <div class="col bg-dark text-white offset-3">b</div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-sm-4 bg-success">a</div>
+           
+                <div class="col-sm-4 offset-sm-4  bg-dark text-white">b</div>
+            </div>
+            <h2>Aligner verticalement les éléments</h2>
+            <p>On peut utiliser la classe align-self sur un élément particulier pour aligner en hauteur un élement particulier</p>
+            <div class="row bg-warning" style="height:99px">
+                <div class="col-4  bg-success align-self-center" >align-self-center</div>
+                <div class="col-4 bg-secondary align-self-end" >align-self-end</div>
+                <div class="col-4  bg-dark align-self-start" >align-self-start</div>
+            </div>
+            <P>On peut utiliser la classe align-items-center sur la ligne(row) pour aligner tous les éléments de la ligne</P>
+            <h3>Align-items-center</h3>
+            <div class="row bg-warning align-items-center" style="height:99px">
+                <div class="col-4  bg-success ">1</div>
+                <div class="col-4 bg-secondary" >2</div>
+                <div class="col-4  bg-dark" >3</div>
+            </div>
+            <h3>Align-items-start</h3>
+            <div class="row bg-warning align-items-start" style="height:99px">
+                <div class="col-4  bg-success ">1</div>
+                <div class="col-4 bg-secondary" >2</div>
+                <div class="col-4  bg-dark" >3</div>
+            </div>
+            <h3>Align-items-end</h3>
+            <div class="row bg-warning align-items-end" style="height:99px">
+                <div class="col-4  bg-success ">1</div>
+                <div class="col-4 bg-secondary" >2</div>
+                <div class="col-4  bg-dark" >3</div>
+            </div>
+            <h2>Exrcices sur les grilles</h2>
+            <div class="row text-center">
+                <div class="col-sm-12 bg-success border border-white">Entête</div>
+                <div class="col-sm-3 bg-success border border-white">Menu</div>
+                <div class="col-sm-9 bg-success border border-white">Section</div>
+                <div class="col-sm-12 bg-success border border-white">Pied de page</div>
+            </div>
+        </section>
+
+        <div class="p-5 text-center">
+            <a href="../formation.html" class= "btn btn-success">Retour au sommaire</a>
+        </div>
+        
+
+        
+        <!-- FOOTER -->
+        <footer class="bg-danger text-white text-right p-3">
+            <div class="container">
+            Formation Bootstrap 4
+            </div>
+        </footer>
+    </body>
+</html>
