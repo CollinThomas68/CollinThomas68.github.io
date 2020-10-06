@@ -1,0 +1,16 @@
+@media all and (min-width: 768px) {
+    #main-jumbotron {
+        height: 400px;
+        background-position: bottom!important;
+        padding: 150px;
+    }
+}
+
+@media all and (min-width: 1300px) {
+    #main-jumbotron {
+        height: 500px;
+        background-position: bottom!important;
+        padding: 150px;
+        max-width:1500px;
+    }
+}
