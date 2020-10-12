@@ -4,53 +4,51 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Les popups</title>
+        <title>Les spoilers</title>
     </head>
     <body>
         <!-- HEADER -->
         <header class="sticky-top bg-danger text-white p-3">
             <div class="container">
-            <h1>Les popups</h1>
+            <h1>Les spoilers</h1>
             </div>
         </header>
         
         <!-- PREMIERE SECTION -->
      
         <section class="p-5 text-center">
-            <h2>Les popup</h2>
-            <!-- BUTTON -->
-            <button class="btn btn-primary" data-toggle="modal" data-target="#example">
-                Ouvrir
+            <h2>Les spoilers</h2>
+            <p>On peut utiliser un bouton, avec data-toggle="collapse" data-target="#spoiler"</p>
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#spoiler1">
+                Afficher
             </button>
-            <!-- MODAL -->
-            <div class="modal" id="example">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <!-- HEADER -->
-                        <div class="modal-header">
-                            <h5 class="modal-title">Ma fenêtre</h5>
-                            <button class="close" data-dismiss="modal">
-                                &times;
-                            </button>
-                        </div>
-                        <!-- BODY -->
-                        <div class="modal-body">
-                            Le texte de la fenêtre
-                        </div>
-                        <!-- FOOTER -->
-                        <div class="modal-footer">
-                            <button class="btn-secondary" data-dismiss="modal">Fermer</button>
-                        </div>
-                    </div>
+            
+            <div id="spoiler1" class="collapse spoiler1 ">
+                <div class=" card card-body spoiler-class">
+                    Premier spoiler
                 </div>
             </div>
+  
+            <p>On peut utiliser un lien, data-target étant remplacé par href="#spoiler"!</p>
+            <div><a href="#spoiler2" data-toggle="collapse">Afficher</a></div>
+            <div id="spoiler2" class="collapse  spoiler-class">
+                <div class=" card card-body">
+                    Deuxième spoiler
+                </div>
+            </div>
+            <p>On peut ouvrir plusieurs spoilers en une fois,mais attention on utilise un Id pour définir le nom du spoiler, celui-ci doit rester unique!!!</p>
+            <p>On rajoute donc une classe aux différents spoilers et on l'utilisera dans data-target=".spoiler-class"</p>
+            <button class="btn btn-primary" data-toggle="collapse" data-target=".spoiler-class">
+                Afficher tous les spoilers
+            </button>
         </section>
 
+
+
         <div class="p-5 text-center">
-            <a href="grille.html" class= "btn btn-primary">Chapître précédent</a>
+            <a href="infobulles.html" class= "btn btn-primary">Chapître précédent</a>
             <a href="../formation.html" class= "btn btn-success">Retour au sommaire</a>
-            <a href="sliders.html" class= "btn btn-primary">Chapître suivant</a>
+            <a href="dropdown.html" class= "btn btn-primary">Chapître suivant</a>
         </div>
         
 
@@ -62,9 +60,10 @@
             Formation Bootstrap 4
             </div>
         </footer>
-
+        
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
     </body>
 </html>

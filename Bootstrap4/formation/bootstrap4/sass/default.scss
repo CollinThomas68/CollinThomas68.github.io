@@ -1,0 +1,8 @@
+// Notre code perso doit être placé avant l'importation de bootstrap
+$theme-colors:(
+    "primary":#563D7C,//on modifie la couleur primary propre à bootstrap
+    "perso": orange//ici on rajoute un thème appelé perso !
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+

@@ -102,7 +102,7 @@
         let partieContact =
         '<article class="row">'+
                     '<form name="formContact" onsubmit="return envoiCommande()" class="col-12">'+
-                        '<div class="form-group row"><label class="col-12 col-sm-3">Nom*:</label><input type="text"  class="col-12 col-sm-9" name="nom" id="nom" pattern="^[A-Z\' ]+$" maxlenght="20" placeholder="Tout en MAJUSCULE !" required></div>'+
+                        '<div class="form-group row"><label class="col-12 col-sm-3">Nom*:</label><input type="text"  class="col-12 col-sm-9" name="nom" id="nom" pattern="^[A-Z\' ]+$" maxlength="20" placeholder="Tout en MAJUSCULE !" required></div>'+
                         '<div class="form-group row"><label class="col-12 col-sm-3">Prénom*:</label><input type="text"  class="col-12 col-sm-9" name="prenom" id="prenom" pattern="^[A-ZÀÁÂÃÄÅÇÑñÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝ]{1}[a-zçàáâãäåçèéêëìíîïðòóôõöøùúûüýÿ]+$" maxlength="25" placeholder="1 majuscule au début..." required></div>'+
                         '<div class="form-group row"><label class="col-12 col-sm-3">Adresse*:</label><input type="text"  class="col-12 col-sm-9" name="adresse" id="adresse" placeholder="Votre adresse " maxlength="60" required></div>'+
                         '<div class="form-group row"><label class="col-12 col-sm-3">CP*:</label><input type="text"  class="col-12 col-sm-9" name="codePostal" id="codePostal" pattern="[0-9]{5}" maxlength="5" placeholder="5 chiffres !" required></div>'+
